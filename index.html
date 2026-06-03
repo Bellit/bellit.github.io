@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Bellido | Full-Stack Developer Portfolio</title>
+    <meta name="description"
+        content="Portfolio y CV de Daniel Bellido, desarrollador Full-Stack con más de 10 años de experiencia en PHP, JavaScript, HTML/CSS y SASS.">
+    <meta name="author" content="DB.dev">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Grid & Cyberpunk Glows -->
+    <div class="cyber-grid"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header" id="main-header">
+        <div class="header-container">
+            <a href="#" class="logo" id="logo-nav">
+                <span class="logo-accent">&lt;</span>DB<span class="logo-accent">.DEV /&gt;</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#about" class="nav-link">Acerca de</a></li>
+                    <li><a href="#experience" class="nav-link">Experiencia</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-content">
+                <div class="cyber-badge">SYSTEM: ONLINE_</div>
+                <h1 class="hero-title" data-text="DANIEL BELLIDO">DANIEL BELLIDO</h1>
+                <div class="typewriter-container">
+                    <span class="typewriter-text" id="typewriter"></span><span class="cursor">|</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#experience" class="btn btn-primary" id="btn-hero-exp">
+                        <span>Ver Experiencia</span>
+                        <i data-lucide="chevron-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" id="btn-hero-contact">
+                        <span>Contactar</span>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator" id="scroll-indicator">
+                <span>SCROLL DOWN</span>
+                <i data-lucide="chevrons-down" class="bounce"></i>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about-section" id="about">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <span class="section-num">01//</span>
+                        <h2 class="section-title">Acerca de mí</h2>
+                    </div>
+                    <div class="header-line"></div>
+                </div>
+
+                <!-- Terminal Window Concept -->
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">dbellido_bio.sh</div>
+                        <div class="terminal-status">bash 5.2</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="t-prompt">guest@dbdev:~$</span> cat about_me.txt</div>
+                        <div class="terminal-output">
+                            <p>Soy desarrollador <strong>Full-Stack</strong> y llevo más de una década creando proyectos
+                                web que funcionan de verdad: rápidos, claros y pensados para las personas que los usan.
+                                Me muevo con soltura entre el back-end en <strong>PHP</strong> y el front-end con
+                                <strong>JavaScript, HTML/CSS y SASS</strong>.
+                            </p>
+
+                            <p>Me considero alguien curioso y práctico. Me gusta entender el porqué de las cosas,
+                                simplificar procesos y dejar el código mejor de lo que me lo encontré. He trabajado en
+                                proyectos muy distintos, desde funcionalidades pequeñas hasta desarrollos completos, y
+                                en todos ellos intento aportar orden, criterio y una buena comunicación con el equipo.
+                            </p>
+
+                            <p>Valoro los entornos donde se aprende, donde se comparte y donde hay espacio para mejorar
+                                continuamente. Me motiva enfrentarme a nuevos retos, seguir creciendo como profesional y
+                                aportar soluciones que tengan impacto real.</p>
+                        </div>
+                        <div class="terminal-line"><span class="t-prompt">guest@dbdev:~$</span> <span
+                                class="blink-cursor">_</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience-section" id="experience">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <span class="section-num">02//</span>
+                        <h2 class="section-title">Experiencia Profesional</h2>
+                    </div>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Sr. Munera -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <div class="job-meta">
+                                    <span class="job-duration">May. 2015 - Actualidad (11+ años)</span>
+                                    <span class="job-location"><i data-lucide="map-pin"></i> Granollers / Híbrido</span>
+                                </div>
+                                <h3 class="job-title">Programador</h3>
+                                <h4 class="job-company">Sr. Munera</h4>
+                            </div>
+                            <div class="job-body">
+                                <p>Desarrollo y mantenimiento de aplicaciones web internas y externas. Implementación de
+                                    nuevas funcionalidades, optimización de rendimiento y refactorización de código
+                                    legacy para asegurar escalabilidad y estabilidad.</p>
+                                <ul>
+                                    <li>Desarrollo robusto en PHP y JavaScript.</li>
+                                    <li>Optimización de bases de datos y lógica del lado del servidor.</li>
+                                    <li>Maquetación responsiva avanzada usando HTML y SASS.</li>
+                                    <li>Colaboración estrecha con equipos de diseño y producto para trasladar prototipos
+                                        a código excelente.</li>
+                                </ul>
+                            </div>
+                            <div class="job-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML5</span>
+                                <span class="tag">SASS</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Refactoring</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ajuntament de la Llagosta -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <div class="job-meta">
+                                    <span class="job-duration">Jul. 2014 - Jul. 2015</span>
+                                    <span class="job-location"><i data-lucide="map-pin"></i> La Llagosta /
+                                        Presencial</span>
+                                </div>
+                                <h3 class="job-title">Técnico Informático</h3>
+                                <h4 class="job-company">Ajuntament de la Llagosta</h4>
+                            </div>
+                            <div class="job-body">
+                                <p>Gestión completa de redes locales y soporte técnico de segundo nivel a toda la
+                                    infraestructura municipal. Diagnóstico de averías y mantenimiento de servidores y
+                                    equipos.</p>
+                            </div>
+                            <div class="job-tags">
+                                <span class="tag">Redes</span>
+                                <span class="tag">Soporte Técnico</span>
+                                <span class="tag">Windows Server</span>
+                                <span class="tag">Hardware</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ingrup -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <div class="job-meta">
+                                    <span class="job-duration">May. 2013 - May. 2014</span>
+                                    <span class="job-location"><i data-lucide="map-pin"></i> Granollers</span>
+                                </div>
+                                <h3 class="job-title">Web Developer</h3>
+                                <h4 class="job-company">Ingrup</h4>
+                            </div>
+                            <div class="job-body">
+                                <p>Diseño y desarrollo de sitios web y aplicaciones interactivas con fuerte enfoque en
+                                    estándares de usabilidad, semántica web y compatibilidad móvil.</p>
+                            </div>
+                            <div class="job-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BuenCurso -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <div class="job-meta">
+                                    <span class="job-duration">Feb. 2013 - May. 2013</span>
+                                    <span class="job-location"><i data-lucide="map-pin"></i> Barcelona</span>
+                                </div>
+                                <h3 class="job-title">Programador</h3>
+                                <h4 class="job-company">BuenCurso</h4>
+                            </div>
+                            <div class="job-body">
+                                <p>Implementación de funcionalidades front-end y back-end en la plataforma educativa,
+                                    enfocadas a mejorar la experiencia del usuario y optimizar la carga de páginas.</p>
+                            </div>
+                            <div class="job-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Web Dev</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Escola Cerveto -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <div class="job-meta">
+                                    <span class="job-duration">Sept. 2010 - Ene. 2012</span>
+                                    <span class="job-location"><i data-lucide="map-pin"></i> Granollers</span>
+                                </div>
+                                <h3 class="job-title">Técnico Informático</h3>
+                                <h4 class="job-company">Escola Cerveto</h4>
+                            </div>
+                            <div class="job-body">
+                                <p>Administración del entorno de servidores Microsoft Server 2003, control de redes,
+                                    gestión de infraestructura Wifi del centro educativo, soporte de Helpdesk para
+                                    sistemas operativos Windows XP, Vista y Windows 7, y mantenimiento preventivo de
+                                    equipos.</p>
+                            </div>
+                            <div class="job-tags">
+                                <span class="tag">Windows Server</span>
+                                <span class="tag">Helpdesk</span>
+                                <span class="tag">Administración de Redes</span>
+                                <span class="tag">Wifi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SET CONSULTING -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <div class="job-meta">
+                                    <span class="job-duration">2007 - Mar. 2010</span>
+                                    <span class="job-location"><i data-lucide="map-pin"></i> Barcelona</span>
+                                </div>
+                                <h3 class="job-title">Programador</h3>
+                                <h4 class="job-company">SET CONSULTING</h4>
+                            </div>
+                            <div class="job-body">
+                                <p>Desarrollador full-stack en diversos proyectos empresariales, trabajando tanto en
+                                    arquitecturas basadas en .NET como en stacks PHP.</p>
+                            </div>
+                            <div class="job-tags">
+                                <span class="tag">ASP.NET</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Visual Basic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menzolit Vitroplast -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <div class="job-meta">
+                                    <span class="job-duration">2005 - 2006</span>
+                                </div>
+                                <h3 class="job-title">Administrador Base de Datos</h3>
+                                <h4 class="job-company">Menzolit Vitroplast</h4>
+                            </div>
+                            <div class="job-body">
+                                <p>Administración y modelado de bases de datos internas, automatización de flujos
+                                    administrativos mediante la generación de formularios complejos y documentos
+                                    automatizados en MS Access y Visual Basic.</p>
+                            </div>
+                            <div class="job-tags">
+                                <span class="tag">MS Access</span>
+                                <span class="tag">Visual Basic</span>
+                                <span class="tag">Database Admin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Skills Section -->
+        <section class="skills-section" id="skills">
+            <div class="section-container">
+                <div class="grid-layout">
+                    <!-- Left: Skills -->
+                    <div class="skills-wrapper">
+                        <div class="section-header">
+                            <div class="section-title-wrapper">
+                                <span class="section-num">03//</span>
+                                <h2 class="section-title">Habilidades</h2>
+                            </div>
+                            <div class="header-line"></div>
+                        </div>
+
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-card-icon"><i data-lucide="server"></i></div>
+                                <h3>Back-End</h3>
+                                <div class="skill-badges">
+                                    <span>PHP</span>
+                                    <span>C#</span>
+                                    <span>ASP.NET</span>
+                                    <span>MySQL</span>
+                                    <span>Visual Basic</span>
+                                    <span>Access</span>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-card-icon"><i data-lucide="layout"></i></div>
+                                <h3>Front-End</h3>
+                                <div class="skill-badges">
+                                    <span>JavaScript</span>
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>SASS / SCSS</span>
+                                    <span>Responsive Design</span>
+                                    <span>Glassmorphism</span>
+                                </div>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-card-icon"><i data-lucide="settings"></i></div>
+                                <h3>Sistemas &amp; Redes</h3>
+                                <div class="skill-badges">
+                                    <span>Windows Server</span>
+                                    <span>Gestión de Redes</span>
+                                    <span>Helpdesk &amp; Soporte</span>
+                                    <span>Wifi &amp; Infraestructura</span>
+                                    <span>Git / Control de Versiones</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Education -->
+                    <div class="education-wrapper">
+                        <div class="section-header">
+                            <div class="section-title-wrapper">
+                                <span class="section-num">04//</span>
+                                <h2 class="section-title">Educación</h2>
+                            </div>
+                            <div class="header-line"></div>
+                        </div>
+
+                        <div class="education-card">
+                            <div class="edu-badge"><i data-lucide="graduation-cap"></i></div>
+                            <div class="edu-meta">
+                                <span class="edu-duration">2005 – 2007</span>
+                                <h3 class="edu-title">Grado Superior</h3>
+                                <h4 class="edu-spec">Desarrollo de aplicaciones y Administración de Sistemas
+                                    Informáticos</h4>
+                                <p class="edu-institution">Educem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <span class="section-num">05//</span>
+                        <h2 class="section-title">Contacto</h2>
+                    </div>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact info / Socials -->
+                    <div class="contact-info">
+                        <h3>¿Hablamos?</h3>
+                        <p class="contact-lead">Estoy abierto a nuevas oportunidades y colaboraciones. Si te gusta mi
+                            perfil, escríbeme y charlamos.</p>
+
+                        <div class="contact-methods">
+                            <div class="method-item">
+                                <div class="method-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect width="4" height="12" x="2" y="9"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/dbellidodev/" target="_blank"
+                                        rel="noopener">dbellidodev</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <!-- We use action="mailto:..." by default or formspree. Users can modify it -->
+                        <form id="contact-form" action="https://formspree.io/f/xkoanreb" method="POST"
+                            class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name" required placeholder="Tu nombre...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="_replyto" required
+                                    placeholder="Tu correo electrónico...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    placeholder="¿En qué puedo ayudarte?"></textarea>
+                            </div>
+
+                            <!-- Botón Cyberpunk -->
+                            <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+                                <span>Enviar mensaje</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                            <div class="form-status" id="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 DB.dev Todos los derechos reservados.</p>
+            <p class="footer-credit">Construido con <i data-lucide="heart" class="heart-icon"></i>, HTML, CSS &amp; JS.
+            </p>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+
+</html>
