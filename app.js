@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Full-Stack Developer',
         'Especialista en PHP & JavaScript',
         '10+ años creando soluciones web',
-        'Apasionado por el código limpio y la lógica'
+        'Apasionado por el código y la lógica'
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            
+
             // Toggle icon menu / close
             const icon = mobileToggle.querySelector('i');
             if (icon) {
@@ -131,13 +131,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm && formStatus) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             // Terminal-like loading status
             formStatus.className = 'form-status';
             formStatus.textContent = 'CONNECTING TO SERVER... SENDING PAYLOAD_';
-            
+
             const data = new FormData(contactForm);
-            
+
             try {
                 const response = await fetch(contactForm.action, {
                     method: contactForm.method,
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         'Accept': 'application/json'
                     }
                 });
-                
+
                 if (response.ok) {
                     formStatus.className = 'form-status success';
                     formStatus.textContent = 'SYSTEM: MESSAGE TRANSMITTED SUCCESSFULLY. WILL CONTACT YOU SOON_';
