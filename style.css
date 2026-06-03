@@ -1002,6 +1002,10 @@ h6 {
     border-color: rgba(255, 0, 127, 0.3);
 }
 
+.skill-card-content {
+    flex: 1;
+}
+
 .skill-card h3 {
     font-size: 1.25rem;
     margin-bottom: 12px;
