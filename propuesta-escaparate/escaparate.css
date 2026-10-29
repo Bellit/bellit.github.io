@@ -1,0 +1,581 @@
+/* DBellido · Escaparate: bloques propios sobre la base «Píxel» (style.css) */
+
+.hero-sub {
+    max-width: 560px;
+    margin: 24px 0 0;
+    font-size: clamp(17px, 1.8vw, 19px);
+    color: var(--muted);
+}
+
+.hero-rotator {
+    margin-top: 20px;
+}
+
+.section-head-row {
+    position: static;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.section-head-row .section-num {
+    margin: 0;
+}
+
+/* ---------- Para quién ---------- */
+
+.audiences {
+    padding-bottom: clamp(56px, 8vw, 96px);
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.audience {
+    padding: 24px;
+    background: var(--bg);
+}
+
+.audience-tag {
+    margin: 0 0 8px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.audience p:not(.audience-tag) {
+    margin: 0;
+    font-size: 15px;
+    color: var(--muted);
+}
+
+/* ---------- Servicios ---------- */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: clamp(24px, 3vw, 32px);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    transition: border-color 0.2s;
+}
+
+.service:hover {
+    border-color: var(--accent-deep);
+}
+
+.service-num,
+.step-num {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent);
+}
+
+.service h3 {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: clamp(20px, 2.2vw, 24px);
+    letter-spacing: -0.03em;
+}
+
+.service p {
+    margin: 0 0 4px;
+    color: var(--muted);
+}
+
+.service .tags {
+    margin-top: auto;
+}
+
+/* ---------- Trabajos ---------- */
+
+.works {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(40px, 6vw, 72px);
+}
+
+.work {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(24px, 4vw, 56px);
+}
+
+.work:nth-child(even) .work-shot {
+    order: 2;
+}
+
+.work-shot {
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface);
+}
+
+.work-shot img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.work:hover .work-shot img {
+    transform: scale(1.02);
+}
+
+.work-type {
+    margin: 0 0 6px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent);
+}
+
+.work h3 {
+    margin: 0 0 20px;
+    font-family: var(--font-mono);
+    font-size: clamp(24px, 2.8vw, 32px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.work-case {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0 0 22px;
+}
+
+.work-case dt {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+.work-case dd {
+    margin: 4px 0 0;
+}
+
+.work-link,
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.work-link:hover,
+.text-link:hover {
+    border-bottom-color: var(--accent);
+}
+
+/* ---------- IA ---------- */
+
+.ai-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(32px, 5vw, 64px);
+}
+
+.ai-col h3 {
+    margin: 0 0 12px;
+    font-family: var(--font-mono);
+    font-size: 20px;
+    letter-spacing: -0.02em;
+}
+
+.ai-col > p {
+    margin: 0 0 20px;
+    color: var(--muted);
+}
+
+.ai-benefits,
+.ai-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ai-benefits li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--muted);
+}
+
+.ai-benefits strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.ai-examples li {
+    position: relative;
+    padding: 14px 16px 14px 38px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.ai-benefits li::before,
+.ai-examples li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+}
+
+.ai-examples li::before {
+    left: 16px;
+    top: 1.45em;
+}
+
+.calc {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    margin-top: clamp(40px, 6vw, 64px);
+    background: var(--surface);
+    border: 1px solid var(--accent-deep);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.calc-main {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: clamp(24px, 3vw, 36px);
+}
+
+.calc-intro h3 {
+    margin: 0 0 6px;
+    font-family: var(--font-mono);
+    font-size: 20px;
+    letter-spacing: -0.02em;
+}
+
+.calc-intro p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--muted);
+}
+
+/* Dos campos y el signo «×» en la misma fila, alineados por arriba */
+.calc-fields {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: start;
+    column-gap: 16px;
+}
+
+.calc-field {
+    display: grid;
+    grid-template-rows: auto 56px auto;
+    row-gap: 8px;
+}
+
+.calc-field label {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.calc-input {
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    transition: border-color 0.15s;
+}
+
+.calc-input:focus-within {
+    border-color: var(--accent);
+}
+
+.calc-input input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0 8px 0 16px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--text);
+    background: none;
+    border: 0;
+    outline: none;
+}
+
+.calc-input span {
+    padding: 0 16px 0 8px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.calc-hint {
+    margin: 0;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.calc-op {
+    /* centrado sobre la caja del input: altura de la etiqueta + separación */
+    display: flex;
+    align-items: center;
+    height: 56px;
+    margin-top: calc(13px * 1.6 + 8px);
+    font-family: var(--font-mono);
+    font-size: 22px;
+    color: var(--accent);
+}
+
+.calc-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding: clamp(24px, 3vw, 36px);
+    background: var(--surface-2);
+    border-left: 1px solid var(--line);
+}
+
+.calc-number {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: clamp(44px, 5.4vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+}
+
+.calc-label {
+    font-size: 16px;
+    color: var(--text);
+}
+
+.calc-note {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* ---------- Contacto: texto bajo el título, formulario a la derecha ---------- */
+
+.section-contact .section-grid {
+    grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+}
+
+.contact-side .contact-intro {
+    margin-top: 28px;
+}
+
+.contact-side .contact-title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+}
+
+.contact-side .contact-intro > p:not(.contact-title) {
+    margin-bottom: 24px;
+}
+
+.section-contact .contact {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+/* ---------- Proceso ---------- */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.step {
+    position: relative;
+    padding-top: 20px;
+    border-top: 2px solid var(--line);
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 32px;
+    height: 2px;
+    background: var(--accent);
+}
+
+.step h3 {
+    margin: 8px 0;
+    font-family: var(--font-mono);
+    font-size: 18px;
+    letter-spacing: -0.02em;
+}
+
+.step p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--muted);
+}
+
+/* ---------- Preguntas frecuentes ---------- */
+
+.faq {
+    border-top: 1px solid var(--line);
+}
+
+.faq details {
+    border-bottom: 1px solid var(--line);
+}
+
+.faq summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    min-height: 64px;
+    padding: 12px 0;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: '+';
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: 22px;
+    color: var(--accent);
+}
+
+.faq details[open] summary::after {
+    content: '−';
+}
+
+.faq details p {
+    max-width: 58ch;
+    margin: 0 0 20px;
+    color: var(--muted);
+}
+
+/* ---------- Formulario: desplegable ---------- */
+
+.field select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    font: inherit;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.field select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.footer-inner a {
+    color: var(--accent);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1000px) {
+    .calc {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .calc-result {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 32px;
+    }
+}
+
+@media (max-width: 900px) {
+    .work {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .work:nth-child(even) .work-shot {
+        order: 0;
+    }
+
+    .ai-grid,
+    .section-contact .section-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .audience-grid,
+    .services,
+    .steps {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .calc-fields {
+        column-gap: 10px;
+    }
+
+    .calc-input input {
+        padding-left: 12px;
+        font-size: 19px;
+    }
+
+    .calc-input span {
+        padding-right: 12px;
+    }
+}
+
+/* Líneas de lectura cómodas: como máximo ~70 caracteres */
+.work-case dd,
+.ai-col > p,
+.ai-examples li,
+.prose p {
+    max-width: 58ch;
+}

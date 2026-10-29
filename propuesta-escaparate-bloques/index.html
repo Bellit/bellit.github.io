@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBellido · Desarrollo web a medida</title>
+    <meta name="description"
+        content="Webs, tiendas online y herramientas a medida para negocios, clubes y agencias. WordPress, WooCommerce y desarrollo asistido por IA.">
+    <meta name="author" content="DBellido">
+    <!-- Propuesta de diseño: no indexar hasta que sustituya a la web principal -->
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#F3F3F0">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="escaparate.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="#top" class="brand" aria-label="DBellido, ir al inicio">
+                <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><path class="blk-d" fill-rule="evenodd" d="M6 14 H26 A20 20 0 0 1 46 34 V66 A20 20 0 0 1 26 86 H6 Z M18 28 H26 A6 6 0 0 1 32 34 V66 A6 6 0 0 1 26 72 H18 Z" /><path class="blk-b" fill-rule="evenodd" d="M54 14 H80 A14 14 0 0 1 94 28 V36 A14 14 0 0 1 80 50 A14 14 0 0 1 94 64 V72 A14 14 0 0 1 80 86 H54 Z M66 26 H76 A6 6 0 0 1 82 32 V38 A6 6 0 0 1 76 44 H66 Z M66 56 H76 A6 6 0 0 1 82 62 V68 A6 6 0 0 1 76 74 H66 Z" /></svg>
+                <span class="brand-name">DBellido</span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav"
+                aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#trabajos">Trabajos</a></li>
+                    <li><a href="#ia">IA</a></li>
+                    <li><a href="#proceso">Cómo trabajo</a></li>
+                    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <!-- Hero -->
+        <section class="hero" id="top">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow">Daniel Bellido · Desarrollo web a medida</p>
+                    <h1 class="hero-title">Webs que funcionan.<br>Código que dura.</h1>
+                    <p class="hero-sub">Diseño y desarrollo webs, tiendas online y herramientas a medida para negocios,
+                        clubes y agencias. Más de 10 años de oficio y la IA como aliada para entregar antes.</p>
+                    <p class="hero-rotator" aria-live="off">
+                        <span class="prompt">&gt;</span>
+                        <span id="rotator">Webs en WordPress</span><span class="cursor" aria-hidden="true"></span>
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contacto" class="btn btn-primary">Cuéntame tu proyecto</a>
+                        <a href="#trabajos" class="btn btn-ghost">Ver trabajos</a>
+                    </div>
+                </div>
+                <div class="hero-art">
+                    <div class="hero-mark blk-panel"><svg viewBox="0 0 100 100" role="img" aria-label="Monograma DB construido con bloques de esquinas redondeadas"><path class="blk-d" fill-rule="evenodd" d="M6 14 H26 A20 20 0 0 1 46 34 V66 A20 20 0 0 1 26 86 H6 Z M18 28 H26 A6 6 0 0 1 32 34 V66 A6 6 0 0 1 26 72 H18 Z" /><path class="blk-b" fill-rule="evenodd" d="M54 14 H80 A14 14 0 0 1 94 28 V36 A14 14 0 0 1 80 50 A14 14 0 0 1 94 64 V72 A14 14 0 0 1 80 86 H54 Z M66 26 H76 A6 6 0 0 1 82 32 V38 A6 6 0 0 1 76 44 H66 Z M66 56 H76 A6 6 0 0 1 82 62 V68 A6 6 0 0 1 76 74 H66 Z" /></svg></div>
+                    <p class="hero-art-caption">Crafted by DBellido</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Para quién -->
+        <section class="audiences" aria-label="Con quién trabajo">
+            <div class="container audience-grid">
+                <article class="audience">
+                    <p class="audience-tag">Negocios y comercios</p>
+                    <p>Una web que se encuentra, se entiende en el móvil y convierte visitas en llamadas, visitas a la
+                        tienda o ventas.</p>
+                </article>
+                <article class="audience">
+                    <p class="audience-tag">Clubes y entidades</p>
+                    <p>Inscripciones, horarios y calendarios en un solo sitio, fáciles de mantener por voluntarios.</p>
+                </article>
+                <article class="audience">
+                    <p class="audience-tag">Agencias</p>
+                    <p>Un desarrollador de confianza cuando os falta mano: maquetación, WordPress a medida e
+                        integraciones, con vuestra marca.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section class="section" id="servicios">
+            <div class="container">
+                <header class="section-head section-head-row">
+                    <span class="section-num">[01]</span>
+                    <h2>Qué puedo hacer por ti</h2>
+                </header>
+                <div class="services">
+                    <article class="service">
+                        <span class="service-num">01</span>
+                        <h3>Webs y tiendas a medida</h3>
+                        <p>WordPress y WooCommerce sin plantillas genéricas: rápidas, fáciles de gestionar para ti y
+                            preparadas para crecer. Pasarelas de pago, envíos y automatizaciones incluidas.</p>
+                        <ul class="tags">
+                            <li>WordPress</li><li>WooCommerce</li><li>SEO técnico</li>
+                        </ul>
+                    </article>
+                    <article class="service">
+                        <span class="service-num">02</span>
+                        <h3>Automatización con IA</h3>
+                        <p>Tareas repetitivas que hoy te comen horas, resueltas solas: fichas de producto, respuestas a
+                            preguntas frecuentes, datos que pasan de un sistema a otro sin copiar a mano.</p>
+                        <ul class="tags">
+                            <li>IA</li><li>Integraciones</li><li>APIs</li>
+                        </ul>
+                    </article>
+                    <article class="service">
+                        <span class="service-num">03</span>
+                        <h3>Herramientas a medida</h3>
+                        <p>Paneles, calendarios y gestores para eso que tu equipo hace hoy con Excel y paciencia. Hechos
+                            para tu forma de trabajar, no al revés.</p>
+                        <ul class="tags">
+                            <li>PHP</li><li>JavaScript</li><li>MySQL</li>
+                        </ul>
+                    </article>
+                    <article class="service">
+                        <span class="service-num">04</span>
+                        <h3>Rescate y mantenimiento</h3>
+                        <p>¿Web lenta, rota o heredada de otro desarrollador? Llevo más de 10 años manteniendo y
+                            refactorizando código en producción. La pongo al día y la dejo en buenas manos.</p>
+                        <ul class="tags">
+                            <li>Rendimiento</li><li>Seguridad</li><li>Legacy</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trabajos -->
+        <section class="section" id="trabajos">
+            <div class="container">
+                <header class="section-head section-head-row">
+                    <span class="section-num">[02]</span>
+                    <h2>Trabajos</h2>
+                </header>
+                <div class="works">
+                    <article class="work">
+                        <a class="work-shot" href="https://bellit.github.io/Web-Ferreteria/" target="_blank"
+                            rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="img/ferreteria-pino.jpg" alt="" width="800" height="506" loading="lazy">
+                        </a>
+                        <div class="work-body">
+                            <p class="work-type">Web para comercio local</p>
+                            <h3>Ferretería Pino</h3>
+                            <dl class="work-case">
+                                <div>
+                                    <dt>Reto</dt>
+                                    <dd>Una ferretería de proximidad desde 1985 que necesitaba transmitir su oficio y
+                                        que el cliente supiera al momento si está abierta y cómo llegar.</dd>
+                                </div>
+                                <div>
+                                    <dt>Solución</dt>
+                                    <dd>Una portada donde se corta una llave en directo, estado abierto o cerrado en
+                                        tiempo real, catálogo filtrable y una barra móvil con Llegar, Llamar y WhatsApp.</dd>
+                                </div>
+                            </dl>
+                            <a class="work-link" href="https://bellit.github.io/Web-Ferreteria/" target="_blank"
+                                rel="noopener">Ver la web ↗</a>
+                        </div>
+                    </article>
+                    <article class="work">
+                        <a class="work-shot" href="https://bellit.github.io/Web-CanovellesBC/" target="_blank"
+                            rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="img/canovelles-bc.jpg" alt="" width="800" height="506" loading="lazy">
+                        </a>
+                        <div class="work-body">
+                            <p class="work-type">Web para club deportivo</p>
+                            <h3>Canovelles Bàsquet Club</h3>
+                            <dl class="work-case">
+                                <div>
+                                    <dt>Reto</dt>
+                                    <dd>Que las familias supieran en segundos si hay grupo para su hijo, dónde se
+                                        entrena y cómo apuntarse, todo desde el móvil.</dd>
+                                </div>
+                                <div>
+                                    <dt>Solución</dt>
+                                    <dd>Cuatro propuestas de diseño para que el club eligiera. Una gira alrededor de un
+                                        carnet de jugador: escribes el nombre y el año y te dice el grupo, con
+                                        preinscripción incluida.</dd>
+                                </div>
+                            </dl>
+                            <a class="work-link" href="https://bellit.github.io/Web-CanovellesBC/" target="_blank"
+                                rel="noopener">Ver las propuestas ↗</a>
+                        </div>
+                    </article>
+                    <article class="work">
+                        <a class="work-shot" href="https://bellit.github.io/MatchCalendar/" target="_blank"
+                            rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="img/matchcalendar.jpg" alt="" width="800" height="506" loading="lazy">
+                        </a>
+                        <div class="work-body">
+                            <p class="work-type">Herramienta web gratuita</p>
+                            <h3>MatchCalendar</h3>
+                            <dl class="work-case">
+                                <div>
+                                    <dt>Reto</dt>
+                                    <dd>Familias, jugadores y coordinadores que necesitan saber si los partidos de
+                                        varios equipos se pisan antes de que pase.</dd>
+                                </div>
+                                <div>
+                                    <dt>Solución</dt>
+                                    <dd>Compara bloques de tiempo (duración más desplazamiento), importa el calendario
+                                        de la federación con solo pegarlo y funciona sin cuentas ni servidor.</dd>
+                                </div>
+                            </dl>
+                            <a class="work-link" href="https://bellit.github.io/MatchCalendar/" target="_blank"
+                                rel="noopener">Probar la herramienta ↗</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- IA -->
+        <section class="section section-ai" id="ia">
+            <div class="container">
+                <header class="section-head section-head-row">
+                    <span class="section-num">[03]</span>
+                    <h2>IA con los pies en el suelo</h2>
+                </header>
+                <div class="ai-grid">
+                    <div class="ai-col">
+                        <h3>Cómo la uso hoy</h3>
+                        <p>Programo con asistentes de IA para quitarme el trabajo mecánico: código repetitivo, pruebas,
+                            documentación. El criterio, la revisión y las decisiones siguen siendo míos.</p>
+                        <ul class="ai-benefits">
+                            <li><strong>Entregas antes.</strong> Menos horas en lo mecánico, más en lo que importa.</li>
+                            <li><strong>Presupuestos más ajustados.</strong> Pagas criterio y resultado, no horas
+                                tecleando.</li>
+                            <li><strong>Misma calidad.</strong> Todo el código pasa por mis manos antes de llegar a ti.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ai-col">
+                        <h3>Qué puede hacer por tu negocio</h3>
+                        <ul class="ai-examples">
+                            <li>Escribir descripciones de producto para tu tienda a partir de una foto o unas notas.</li>
+                            <li>Responder las preguntas de siempre (horarios, envíos, inscripciones) en tu web, a
+                                cualquier hora.</li>
+                            <li>Leer emails o pedidos y ordenarlos por tipo o urgencia.</li>
+                            <li>Pasar datos de un PDF o un Excel a tu sistema sin copiarlos a mano.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <form class="calc" id="calc" aria-labelledby="calc-title">
+                    <div class="calc-main">
+                        <div class="calc-intro">
+                            <h3 id="calc-title">Antes de automatizar, mide</h3>
+                            <p>¿Cuánto tiempo se va en tareas repetitivas? Pon tus números.</p>
+                        </div>
+                        <div class="calc-fields">
+                            <div class="calc-field">
+                                <label for="calc-hours">Horas a la semana</label>
+                                <div class="calc-input">
+                                    <input type="number" id="calc-hours" min="0" max="60" step="0.5" value="4"
+                                        inputmode="decimal">
+                                    <span aria-hidden="true">h</span>
+                                </div>
+                                <p class="calc-hint">por persona</p>
+                            </div>
+                            <span class="calc-op" aria-hidden="true">×</span>
+                            <div class="calc-field">
+                                <label for="calc-people">Personas</label>
+                                <div class="calc-input">
+                                    <input type="number" id="calc-people" min="1" max="200" step="1" value="2"
+                                        inputmode="numeric">
+                                    <span aria-hidden="true">pers.</span>
+                                </div>
+                                <p class="calc-hint">que hacen esas tareas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <output class="calc-result" id="calc-result" for="calc-hours calc-people">
+                        <span class="calc-number"><span id="calc-number">368</span> h</span>
+                        <span class="calc-label">al año en tareas que una máquina podría hacer</span>
+                        <span class="calc-note">Calculado sobre 46 semanas laborables.</span>
+                    </output>
+                </form>
+            </div>
+        </section>
+
+        <!-- Proceso -->
+        <section class="section" id="proceso">
+            <div class="container">
+                <header class="section-head section-head-row">
+                    <span class="section-num">[04]</span>
+                    <h2>Cómo trabajo</h2>
+                </header>
+                <ol class="steps">
+                    <li class="step">
+                        <span class="step-num">01</span>
+                        <h3>Hablamos</h3>
+                        <p>Me cuentas qué necesitas y qué te frena hoy. Sin tecnicismos y sin compromiso.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-num">02</span>
+                        <h3>Propuesta cerrada</h3>
+                        <p>Te envío qué haré, en cuánto tiempo y por cuánto. Sin sorpresas a mitad de camino.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-num">03</span>
+                        <h3>Desarrollo con entregas</h3>
+                        <p>Ves avances reales cada pocos días y puedes opinar antes de que esté terminado.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-num">04</span>
+                        <h3>Lanzamiento y soporte</h3>
+                        <p>Lo publicamos, te enseño a gestionarlo y sigo ahí si algo falla o quieres crecer.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Sobre mí -->
+        <section class="section" id="sobre-mi">
+            <div class="container section-grid">
+                <header class="section-head">
+                    <span class="section-num">[05]</span>
+                    <h2>Quién hay detrás</h2>
+                </header>
+                <div class="prose">
+                    <p class="lead">Soy Daniel Bellido, desarrollador Full-Stack en Granollers. Llevo más de 10 años
+                        construyendo y manteniendo software que se usa cada día.</p>
+                    <p>He trabajado en agencia, en empresa y en la administración pública, con <strong>PHP</strong>,
+                        <strong>JavaScript</strong>, <strong>WordPress</strong> y <strong>WooCommerce</strong>. Me
+                        gusta simplificar, explicar las cosas claras y dejar cada proyecto mejor de lo que lo encontré.
+                    </p>
+                    <a class="text-link" href="cv/">Ver mi CV completo →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="preguntas">
+            <div class="container section-grid">
+                <header class="section-head">
+                    <span class="section-num">[06]</span>
+                    <h2>Preguntas frecuentes</h2>
+                </header>
+                <div class="faq">
+                    <details>
+                        <summary>¿Cuánto cuesta?</summary>
+                        <p>Depende de lo que necesites, por eso no publico tarifas. Después de una primera charla te
+                            envío un presupuesto cerrado y sin compromiso.</p>
+                    </details>
+                    <details>
+                        <summary>¿Podré cambiar los textos y las fotos yo mismo?</summary>
+                        <p>Sí. Te dejo la web preparada para que lo gestiones sin tocar código y te enseño a hacerlo.</p>
+                    </details>
+                    <details>
+                        <summary>¿Cuánto se tarda?</summary>
+                        <p>Cada proyecto es distinto. El plazo va por escrito en la propuesta, junto con las entregas
+                            intermedias.</p>
+                    </details>
+                    <details>
+                        <summary>¿Y cuando la web ya esté publicada?</summary>
+                        <p>Puedo encargarme del mantenimiento: actualizaciones, copias de seguridad, seguridad y
+                            pequeños cambios. Si prefieres llevarlo tú, también te lo dejo todo documentado.</p>
+                    </details>
+                    <details>
+                        <summary>¿Trabajas con agencias?</summary>
+                        <p>Sí. Puedo integrarme en vuestro equipo para proyectos concretos y trabajar con vuestra marca.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="section section-contact" id="contacto">
+            <div class="container section-grid">
+                <div class="section-head contact-side">
+                    <span class="section-num">[07]</span>
+                    <h2>Contacto</h2>
+                    <div class="contact-intro">
+                        <p class="contact-title">Cuéntame tu proyecto</p>
+                        <p>Aunque sea solo una idea. Te respondo en persona y, si encaja, te preparo una propuesta.</p>
+                        <a class="contact-link" href="https://www.linkedin.com/in/dbellidodev/" target="_blank"
+                            rel="noopener">
+                            <span class="contact-link-label">LinkedIn</span>
+                            <span>/in/dbellidodev ↗</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xkoanreb" method="POST">
+                        <div class="field">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="_replyto" required autocomplete="email">
+                        </div>
+                        <div class="field">
+                            <label for="project-type">¿Qué necesitas?</label>
+                            <select id="project-type" name="tipo_proyecto">
+                                <option>Una web nueva</option>
+                                <option>Una tienda online</option>
+                                <option>Automatizar tareas con IA</option>
+                                <option>Una herramienta a medida</option>
+                                <option>Arreglar o mantener una web</option>
+                                <option>Colaborar con mi agencia</option>
+                                <option>Otra cosa</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="message">Cuéntame un poco más</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                        <p class="form-status" id="form-status" role="status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Daniel Bellido · <a href="cv/">CV</a></p>
+            <p class="signature">
+                <svg class="sig-mark" viewBox="0 0 100 100" aria-hidden="true"><path class="blk-d" fill-rule="evenodd" d="M6 14 H26 A20 20 0 0 1 46 34 V66 A20 20 0 0 1 26 86 H6 Z M18 28 H26 A6 6 0 0 1 32 34 V66 A6 6 0 0 1 26 72 H18 Z" /><path class="blk-b" fill-rule="evenodd" d="M54 14 H80 A14 14 0 0 1 94 28 V36 A14 14 0 0 1 80 50 A14 14 0 0 1 94 64 V72 A14 14 0 0 1 80 86 H54 Z M66 26 H76 A6 6 0 0 1 82 32 V38 A6 6 0 0 1 76 44 H66 Z M66 56 H76 A6 6 0 0 1 82 62 V68 A6 6 0 0 1 76 74 H66 Z" /></svg>
+                Crafted by DBellido
+            </p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
