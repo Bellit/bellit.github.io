@@ -1294,6 +1294,38 @@ h6 {
     font-size: 0.85rem;
 }
 
+.footer-proposals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px 6px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.footer-proposals:hover,
+.footer-proposals:focus-within {
+    opacity: 1;
+}
+
+.footer-proposals a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0 6px;
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-proposals a:hover {
+    color: var(--text-main, #fff);
+}
+
 .heart-icon {
     display: inline-block;
     width: 12px;
