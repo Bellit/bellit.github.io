@@ -144,18 +144,30 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(() => requestAnimationFrame(() => { if (!started) show(0); }));
     }
 
-    // 3. IA: los carriles del esquema se dibujan al llegar a ellos (sin JS se ven completos)
-    const aiFlow = document.getElementById('ai-flow');
+    // 3. IA: al llegar se ve cómo cambia el proyecto con IA; después se puede alternar
+    const timeBar = document.getElementById('time-bar');
 
-    if (aiFlow && !reduceMotion && 'IntersectionObserver' in window) {
-        aiFlow.classList.add('is-waiting');
-        const aiFlowObserver = new IntersectionObserver((entries) => {
-            if (entries.some((entry) => entry.isIntersecting)) {
-                aiFlow.classList.remove('is-waiting');
-                aiFlowObserver.disconnect();
-            }
-        }, { threshold: 0.3 });
-        aiFlowObserver.observe(aiFlow);
+    if (timeBar) {
+        const compareTabs = [...document.querySelectorAll('.compare-tab')];
+
+        const setTimeMode = (withAi) => {
+            timeBar.classList.toggle('with-ai', withAi);
+            compareTabs.forEach((tab) => tab.setAttribute('aria-pressed', String((tab.dataset.mode === 'ai') === withAi)));
+        };
+
+        compareTabs.forEach((tab) => tab.addEventListener('click', () => setTimeMode(tab.dataset.mode === 'ai')));
+
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+            setTimeMode(true);
+        } else {
+            const timeObserver = new IntersectionObserver((entries) => {
+                if (entries.some((entry) => entry.isIntersecting)) {
+                    setTimeout(() => setTimeMode(true), 500);
+                    timeObserver.disconnect();
+                }
+            }, { threshold: 0.5 });
+            timeObserver.observe(timeBar);
+        }
     }
 
     const aiIdeasCta = document.querySelector('.ai-ideas-cta');

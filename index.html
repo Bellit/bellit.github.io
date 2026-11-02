@@ -328,57 +328,33 @@
                     <span class="section-num">[03]</span>
                     <h2>IA con los pies en el suelo</h2>
                 </header>
-                <div class="ai-intro">
-                    <p class="ai-statement">Programo con IA para ir más rápido. Lo que hay que decidir, lo decido yo.</p>
-                    <p>Me quita de encima el trabajo mecánico: código repetitivo, pruebas y modificaciones.</p>
+                <p class="ia-sub">El mismo proyecto y el mismo criterio. Lo que se reduce es el tiempo de trabajo mecánico.</p>
+                <div class="compare-tabs" role="group" aria-label="Comparar el proyecto">
+                    <button type="button" class="compare-tab" data-mode="before" aria-pressed="true">Sin IA</button>
+                    <button type="button" class="compare-tab" data-mode="ai" aria-pressed="false">Con IA</button>
                 </div>
-
-                <div class="ai-flow" id="ai-flow">
-                    <span class="ai-lane ai-lane-me" aria-hidden="true">Yo</span>
-                    <span class="ai-lane ai-lane-ai" aria-hidden="true">IA</span>
-                    <ol class="ai-steps">
-                        <li class="ai-step">
-                            <h3>Entender</h3>
-                            <p>Qué necesitas y qué te frena.</p>
-                        </li>
-                        <li class="ai-step">
-                            <h3>Decidir</h3>
-                            <p>Qué se hace y cómo se hace.</p>
-                        </li>
-                        <li class="ai-step">
-                            <h3>Programar</h3>
-                            <p>Con IA, el código repetitivo va mucho más rápido.</p>
-                        </li>
-                        <li class="ai-step">
-                            <h3>Probar</h3>
-                            <p>Con IA, las pruebas cubren más en menos tiempo.</p>
-                        </li>
-                        <li class="ai-step">
-                            <h3>Modificar</h3>
-                            <p>Con IA, los cambios se aplican antes.</p>
-                        </li>
-                        <li class="ai-step">
-                            <h3>Revisar</h3>
-                            <p>Todo el código pasa por mis manos antes de llegar a ti.</p>
-                        </li>
-                    </ol>
+                <div class="time-bar" id="time-bar" role="img"
+                    aria-label="Esquema de un proyecto: con IA se reducen programar, probar y modificar; entender, decidir y revisar no cambian.">
+                    <div class="time-seg">Entender</div>
+                    <div class="time-seg">Decidir</div>
+                    <div class="time-seg time-seg-ai">Programar</div>
+                    <div class="time-seg time-seg-ai">Probar</div>
+                    <div class="time-seg time-seg-ai">Modificar</div>
+                    <div class="time-seg">Revisar</div>
+                    <div class="time-seg time-gain"><span>Tiempo que ganas</span></div>
                 </div>
+                <ul class="time-legend">
+                    <li><i aria-hidden="true"></i>Lo hago yo, igual que siempre</li>
+                    <li><i aria-hidden="true"></i>Lo hago yo, más rápido con IA</li>
+                    <li>Esquema orientativo, no a escala</li>
+                </ul>
+                <ul class="time-gains">
+                    <li><strong>Entregas antes</strong>Menos horas en lo mecánico, más en lo que importa.</li>
+                    <li><strong>Presupuestos más ajustados</strong>Pagas criterio y resultado, no horas tecleando.</li>
+                    <li><strong>Misma calidad</strong>La IA acelera el trabajo, no sustituye la revisión.</li>
+                </ul>
 
-                <div class="ai-gains">
-                    <ul class="ai-gains-list">
-                        <li><strong>Entregas antes</strong>Menos horas en lo mecánico, más en lo que importa.</li>
-                        <li><strong>Presupuestos más ajustados</strong>Pagas criterio y resultado, no horas tecleando.</li>
-                        <li><strong>Misma calidad</strong>La IA acelera el trabajo, no sustituye la revisión.</li>
-                    </ul>
-                    <a class="ai-case" href="https://vortexball.vercel.app/" target="_blank" rel="noopener">
-                        <img src="img/vortexball.jpg" alt="Portada de la web de VortexBall" width="1600" height="1012" loading="lazy">
-                        <span class="ai-case-body">
-                            <span><strong>VortexBall</strong> · Producto ficticio, programado con IA</span>
-                            <span class="ai-case-link">Ver el ejemplo ↗</span>
-                        </span>
-                    </a>
-                </div>
-
+                <div class="ai-gains-single">
                 <div class="ai-ideas">
                     <div class="ai-ideas-copy">
                         <h3>¿Y aplicarla a tu negocio?</h3>
@@ -391,6 +367,14 @@
                         <li>Leer emails o pedidos y ordenarlos por tipo o urgencia.</li>
                         <li>Pasar datos de un PDF o un Excel a tu sistema sin copiarlos a mano.</li>
                     </ul>
+                </div>
+                    <a class="ai-case" href="https://vortexball.vercel.app/" target="_blank" rel="noopener">
+                        <img src="img/vortexball.jpg" alt="Portada de la web de VortexBall" width="1600" height="1012" loading="lazy">
+                        <span class="ai-case-body">
+                            <span><strong>VortexBall</strong> · Producto ficticio, programado con IA</span>
+                            <span class="ai-case-link">Ver el ejemplo ↗</span>
+                        </span>
+                    </a>
                 </div>
             </div>
         </section>
