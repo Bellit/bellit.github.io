@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="escaparate.css">
     <link rel="stylesheet" href="toques.css">
+    <link rel="stylesheet" href="necesidades.css">
 </head>
 
 <body>
@@ -111,47 +112,105 @@
             <div class="container">
                 <header class="section-head section-head-row">
                     <span class="section-num">[01]</span>
-                    <h2>Qué puedo hacer por ti</h2>
+                    <h2>¿Qué necesitas?</h2>
                 </header>
-                <div class="services">
-                    <article class="service service-featured">
-                        <div>
-                            <span class="service-flag"><i class="px" aria-hidden="true"></i>Mi especialidad</span>
-                            <h3>Webs y tiendas a medida</h3>
+                <div class="needs" id="needs">
+                    <h3 class="need-title">
+                        <button type="button" class="need-btn" aria-expanded="true" aria-controls="need-web"><span>Una web nueva</span></button>
+                    </h3>
+                    <div class="need-panel" id="need-web">
+                        <p class="need-lead">Una web hecha a medida, que se vea bien en cualquier pantalla y que puedas gestionar sin mí.</p>
+                        <ul class="need-points">
+                            <li>Maquetación propia, sin plantillas genéricas.</li>
+                            <li>Responsive, rápida y accesible.</li>
+                            <li>En WordPress si vas a editarla tú, o a medida si el proyecto lo pide.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>HTML</li><li>CSS / SASS</li><li>JavaScript</li><li>WordPress</li>
+                        </ul>
+                        <div class="need-foot">
+                            <p class="need-proof">Un ejemplo: <a href="https://bellit.github.io/Web-Ferreteria/" target="_blank" rel="noopener">Ferretería Pino ↗</a></p>
+                            <a class="need-cta" href="#contacto" data-project="Una web nueva">Cuéntame tu caso →</a>
                         </div>
-                        <div>
-                            <p>WordPress y WooCommerce sin plantillas genéricas: rápidas, fáciles de gestionar para ti y
-                                preparadas para crecer. Pasarelas de pago, envíos y automatizaciones incluidas.</p>
-                            <ul class="tags">
-                                <li>WordPress</li><li>WooCommerce</li><li>SEO técnico</li>
-                            </ul>
+                    </div>
+
+                    <h3 class="need-title">
+                        <button type="button" class="need-btn" aria-expanded="false" aria-controls="need-tienda"><span>Vender online</span></button>
+                    </h3>
+                    <div class="need-panel" id="need-tienda">
+                        <p class="need-lead">Una tienda con WooCommerce adaptada a cómo vendes, no al revés.</p>
+                        <ul class="need-points">
+                            <li>Pasarelas de pago y envíos.</li>
+                            <li>Funcionalidades a medida e integración con otros sistemas.</li>
+                            <li>Automatización de los procesos que hoy haces a mano.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>WooCommerce</li><li>PHP</li><li>APIs</li>
+                        </ul>
+                        <div class="need-foot">
+                            <p class="need-proof">Más de 10 años trabajando con WordPress y WooCommerce.</p>
+                            <a class="need-cta" href="#contacto" data-project="Una tienda online">Cuéntame tu caso →</a>
                         </div>
-                    </article>
-                    <article class="service">
-                        <h3>Automatización con IA</h3>
-                        <p>Tareas repetitivas que hoy te comen horas, resueltas solas: fichas de producto, respuestas a
-                            preguntas frecuentes, datos que pasan de un sistema a otro sin copiar a mano.</p>
-                        <ul class="tags">
-                            <li>IA</li><li>Integraciones</li><li>APIs</li>
+                    </div>
+
+                    <h3 class="need-title">
+                        <button type="button" class="need-btn" aria-expanded="false" aria-controls="need-tool"><span>Una herramienta a medida</span></button>
+                    </h3>
+                    <div class="need-panel" id="need-tool">
+                        <p class="need-lead">Paneles, calendarios y gestores para eso que tu equipo hace hoy con Excel y paciencia.</p>
+                        <ul class="need-points">
+                            <li>Hecha para tu forma de trabajar.</li>
+                            <li>Interfaz clara, para que nadie necesite un manual.</li>
+                            <li>Conectada con los datos y sistemas que ya usas.</li>
                         </ul>
-                    </article>
-                    <article class="service">
-                        <h3>Herramientas a medida</h3>
-                        <p>Paneles, calendarios y gestores para eso que tu equipo hace hoy con Excel y paciencia. Hechos
-                            para tu forma de trabajar, no al revés.</p>
                         <ul class="tags">
-                            <li>PHP</li><li>JavaScript</li><li>MySQL</li>
+                            <li>JavaScript</li><li>PHP</li><li>MySQL</li>
                         </ul>
-                    </article>
-                    <article class="service">
-                        <h3>Rescate y mantenimiento</h3>
-                        <p>¿Web lenta, rota o heredada de otro desarrollador? Llevo más de 10 años manteniendo y
-                            refactorizando código en producción. La pongo al día y la dejo en buenas manos.</p>
+                        <div class="need-foot">
+                            <p class="need-proof">Un ejemplo: <a href="https://bellit.github.io/MatchCalendar/" target="_blank" rel="noopener">MatchCalendar ↗</a></p>
+                            <a class="need-cta" href="#contacto" data-project="Una herramienta a medida">Cuéntame tu caso →</a>
+                        </div>
+                    </div>
+
+                    <h3 class="need-title">
+                        <button type="button" class="need-btn" aria-expanded="false" aria-controls="need-rescate"><span>Arreglar o mantener mi web</span></button>
+                    </h3>
+                    <div class="need-panel" id="need-rescate">
+                        <p class="need-lead">¿Lenta, rota o heredada de otro desarrollador? La pongo al día y la dejo en buenas manos.</p>
+                        <ul class="need-points">
+                            <li>Optimización de rendimiento.</li>
+                            <li>Refactorización de código antiguo sin romper lo que funciona.</li>
+                            <li>Actualizaciones, copias de seguridad y pequeños cambios.</li>
+                        </ul>
                         <ul class="tags">
-                            <li>Rendimiento</li><li>Seguridad</li><li>Legacy</li>
+                            <li>PHP</li><li>jQuery</li><li>MySQL</li><li>WordPress</li>
                         </ul>
-                    </article>
+                        <div class="need-foot">
+                            <p class="need-proof">Más de 10 años manteniendo código en producción.</p>
+                            <a class="need-cta" href="#contacto" data-project="Arreglar o mantener una web">Cuéntame tu caso →</a>
+                        </div>
+                    </div>
+
+                    <h3 class="need-title">
+                        <button type="button" class="need-btn" aria-expanded="false" aria-controls="need-agencia"><span>Refuerzo para mi agencia</span></button>
+                    </h3>
+                    <div class="need-panel" id="need-agencia">
+                        <p class="need-lead">Un desarrollador de confianza cuando os falta mano, trabajando con vuestra marca.</p>
+                        <ul class="need-points">
+                            <li>Del diseño al código: maquetación fiel y responsive.</li>
+                            <li>Temas y plugins de WordPress a medida.</li>
+                            <li>Integraciones y funcionalidades concretas.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>HTML</li><li>SASS</li><li>JavaScript</li><li>WordPress</li>
+                        </ul>
+                        <div class="need-foot">
+                            <p class="need-proof">Experiencia llevando prototipos a código junto a equipos de diseño y producto.</p>
+                            <a class="need-cta" href="#contacto" data-project="Colaborar con mi agencia">Cuéntame tu caso →</a>
+                        </div>
+                    </div>
                 </div>
+                <p class="needs-note"><i class="px" aria-hidden="true"></i>En todos los casos programo con IA para acelerar el desarrollo, las pruebas y los cambios. El criterio y la revisión siguen siendo míos.</p>
             </div>
         </section>
 

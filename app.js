@@ -176,6 +176,48 @@ document.addEventListener('DOMContentLoaded', () => {
         stepsObserver.observe(steps);
     }
 
+    // 3c. Servicios: una necesidad abierta cada vez, con un marcador que viaja por la lista
+    const needs = document.getElementById('needs');
+
+    if (needs) {
+        const needButtons = [...needs.querySelectorAll('.need-btn')];
+        const marker = document.createElement('span');
+        marker.className = 'need-marker';
+        marker.setAttribute('aria-hidden', 'true');
+        needs.appendChild(marker);
+
+        const placeMarker = () => {
+            const active = needButtons.find((button) => button.getAttribute('aria-expanded') === 'true');
+            const box = needs.getBoundingClientRect();
+            const rect = active.getBoundingClientRect();
+            const x = rect.right - box.left - 10;
+            const y = rect.top - box.top + rect.height / 2 - 5;
+            marker.style.transform = `translate(${x}px, ${y}px)`;
+        };
+
+        const openNeed = (active) => {
+            needButtons.forEach((button) => {
+                const isActive = button === active;
+                button.setAttribute('aria-expanded', String(isActive));
+                document.getElementById(button.getAttribute('aria-controls')).classList.toggle('is-active', isActive);
+            });
+            placeMarker();
+        };
+
+        needs.classList.add('is-ready');
+        needButtons.forEach((button) => button.addEventListener('click', () => openNeed(button)));
+        openNeed(needButtons[0]);
+        if ('ResizeObserver' in window) new ResizeObserver(placeMarker).observe(needs);
+
+        // Cada necesidad deja elegido el tipo de proyecto en el formulario
+        const projectType = document.getElementById('project-type');
+        needs.querySelectorAll('.need-cta').forEach((link) => {
+            link.addEventListener('click', () => {
+                if (projectType) projectType.value = link.dataset.project;
+            });
+        });
+    }
+
     // 4. Borde de la cabecera al hacer scroll
     const header = document.getElementById('site-header');
     const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);

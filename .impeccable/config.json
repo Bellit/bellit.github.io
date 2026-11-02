@@ -20,6 +20,15 @@
         ],
         "createdAt": "2026-11-02T09:21:52.890Z",
         "reason": "Agent: false positive; same layout as propuesta-escaparate, real inset via child containers and padding"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "Web personal VERSIONES/servicios/index.html"
+        ],
+        "createdAt": "2026-11-02T10:55:17.308Z",
+        "reason": "Agent: remaining hit is the large display statement in proposal B, where tight leading is intentional"
       }
     ]
   }
