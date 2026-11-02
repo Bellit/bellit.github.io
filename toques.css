@@ -175,40 +175,6 @@
     color: var(--warm);
 }
 
-/* ---------- Proceso: el proyecto se completa píxel a píxel ---------- */
-
-.step-px {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 20px;
-}
-
-.step-px i {
-    display: block;
-    width: 12px;
-    height: 12px;
-    background: var(--surface-2);
-    transition: background-color 0.3s ease-out;
-    transition-delay: calc(var(--step, 0) * 180ms);
-}
-
-.step:nth-child(1) { --step: 0; }
-.step:nth-child(2) { --step: 1; }
-.step:nth-child(3) { --step: 2; }
-.step:nth-child(4) { --step: 3; }
-
-.step-px i.on {
-    background: var(--accent);
-}
-
-.step:last-child .step-px i.on {
-    background: var(--warm);
-}
-
-.steps.is-waiting .step-px i.on {
-    background: var(--surface-2);
-}
-
 /* ---------- Quién hay detrás ---------- */
 
 #sobre-mi .prose .lead {
@@ -292,7 +258,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .step-px i,
     .hero-stage i {
         transition: none;
     }

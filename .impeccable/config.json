@@ -29,6 +29,15 @@
         ],
         "createdAt": "2026-11-02T10:55:17.308Z",
         "reason": "Agent: remaining hit is the large display statement in proposal B, where tight leading is intentional"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-02T13:43:50.566Z",
+        "reason": "Agent: false positive; the amber gradient in .worry-text is a 2px strike line, not the text background"
       }
     ]
   }

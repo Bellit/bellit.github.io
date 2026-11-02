@@ -179,18 +179,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3b. Los pasos del proceso se completan al llegar a ellos (sin JS se ven completos)
-    const steps = document.getElementById('steps');
+    // 3b. Cómo trabajo: el scroll va tachando cada duda y, al terminar, aparece su respuesta
+    const worries = document.getElementById('worries');
 
-    if (steps && !reduceMotion && 'IntersectionObserver' in window) {
-        steps.classList.add('is-waiting');
-        const stepsObserver = new IntersectionObserver((entries) => {
-            if (entries.some((entry) => entry.isIntersecting)) {
-                steps.classList.remove('is-waiting');
-                stepsObserver.disconnect();
-            }
-        }, { threshold: 0.4 });
-        stepsObserver.observe(steps);
+    if (worries && !reduceMotion) {
+        const worryRows = [...worries.querySelectorAll('.worry')];
+        const worryMarker = document.createElement('span');
+        let worryFrame = 0;
+
+        worryMarker.className = 'worry-marker';
+        worryMarker.setAttribute('aria-hidden', 'true');
+        worries.appendChild(worryMarker);
+        worries.classList.add('is-live');
+
+        const updateWorries = () => {
+            worryFrame = 0;
+            const viewport = window.innerHeight;
+            // Cada fila se tacha mientras recorre su propia altura, así van de una en una
+            const start = viewport * 0.62;
+            const box = worries.getBoundingClientRect();
+            let current = worryRows[0];
+
+            worryRows.forEach((row) => {
+                const rect = row.getBoundingClientRect();
+                const strike = Math.min(1, Math.max(0, (start - rect.top) / rect.height));
+                row.style.setProperty('--strike', strike.toFixed(3));
+                row.classList.toggle('is-solved', strike === 1);
+                if (rect.top < start) current = row;
+            });
+
+            worryRows.forEach((row) => row.classList.toggle('is-current', row === current));
+            worryMarker.style.transform = `translateY(${current.getBoundingClientRect().top - box.top}px)`;
+        };
+
+        const requestWorries = () => {
+            if (!worryFrame) worryFrame = requestAnimationFrame(updateWorries);
+        };
+
+        window.addEventListener('scroll', requestWorries, { passive: true });
+        window.addEventListener('resize', requestWorries);
+        updateWorries();
     }
 
     // 3c. Servicios: una necesidad abierta cada vez, con un marcador que viaja por la lista

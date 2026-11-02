@@ -1,0 +1,197 @@
+/* DBellido · Comparación de propuestas para la sección Cómo trabajo */
+
+.section-head {
+    top: 150px;
+}
+
+/* Hueco final para poder recorrer la sección entera en esta página de prueba */
+main {
+    padding-bottom: 50svh;
+}
+
+/* ---------- Propuesta A: recorrido ---------- */
+
+.track {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 40px;
+    list-style: none;
+}
+
+/* Raíl que se va llenando con el scroll */
+.track-rail {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    width: 2px;
+    background: var(--line);
+}
+
+.track-fill {
+    position: absolute;
+    inset: 0;
+    background: var(--warm);
+    transform-origin: top;
+}
+
+.track-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 16px clamp(24px, 4vw, 48px);
+    align-items: start;
+    padding-block: 32px;
+    border-bottom: 1px solid var(--line);
+}
+
+.track-rail + .track-step {
+    padding-top: 0;
+}
+
+.track-step:last-of-type {
+    border-bottom: 0;
+}
+
+.track-step::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    width: 12px;
+    height: 12px;
+    background: var(--warm);
+    transition: background-color 0.3s ease-out;
+}
+
+.track-rail + .track-step::before {
+    top: 8px;
+}
+
+.track-step h3 {
+    margin: 0 0 8px;
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.track-step > div > p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.track-get {
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-m);
+    transition: border-color 0.3s ease-out;
+}
+
+.track-get span {
+    display: block;
+    margin-bottom: 4px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--muted);
+}
+
+.track-get p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Con JavaScript, cada paso se enciende cuando el raíl llega a él */
+.track.is-live .track-step:not(.is-reached)::before {
+    background: var(--line-strong);
+}
+
+.track.is-live .track-step.is-reached .track-get {
+    border-color: var(--line-strong);
+}
+
+/* ---------- Propuesta B: dudas y respuestas ---------- */
+
+.worries {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+}
+
+.worry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 16px clamp(32px, 6vw, 80px);
+    align-items: start;
+    padding-block: clamp(28px, 4vw, 44px);
+    border-bottom: 1px solid var(--line);
+}
+
+.worry-text {
+    margin: 0;
+    font-size: var(--fs-xl);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+/* Una línea ámbar tacha la duda al llegar a ella */
+.worry-text span {
+    background-image: linear-gradient(var(--warm), var(--warm));
+    background-position: 0 58%;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    transition: background-size 0.8s cubic-bezier(0.7, 0, 0.15, 1);
+}
+
+.worry-answer {
+    transition: opacity 0.5s ease-out 0.45s, transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.45s;
+}
+
+.worry-answer h3 {
+    margin: 0 0 8px;
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--warm);
+}
+
+.worry-answer p {
+    margin: 0;
+    color: var(--text);
+}
+
+.worries.is-live .worry:not(.is-seen) .worry-text span {
+    background-size: 0 2px;
+}
+
+.worries.is-live .worry:not(.is-seen) .worry-answer {
+    opacity: 0;
+    transform: translateY(12px);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+    .section-head {
+        top: auto;
+    }
+
+    .track-step,
+    .worry {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .track-step::before,
+    .track-get,
+    .worry-text span,
+    .worry-answer {
+        transition: none;
+    }
+}
