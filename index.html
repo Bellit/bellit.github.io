@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="escaparate.css">
     <link rel="stylesheet" href="toques.css">
     <link rel="stylesheet" href="necesidades.css">
+    <link rel="stylesheet" href="trabajos.css">
 </head>
 
 <body>
@@ -215,17 +216,28 @@
         </section>
 
         <!-- Trabajos -->
-        <section class="section section-band" id="trabajos">
-            <div class="container">
-                <header class="section-head section-head-row">
-                    <span class="section-num">[02]</span>
-                    <h2>Trabajos</h2>
-                </header>
-                <div class="works">
-                    <article class="work">
-                        <a class="work-shot" href="https://bellit.github.io/Web-Ferreteria/" target="_blank"
-                            rel="noopener" tabindex="-1" aria-hidden="true">
-                            <img src="img/ferreteria-pino-hd.jpg" alt="" width="1600" height="1012" loading="lazy">
+        <section class="pin" id="trabajos" aria-labelledby="pin-title">
+            <div class="pin-sticky">
+                <div class="container pin-inner">
+                    <header class="pin-head">
+                        <div>
+                            <span class="section-num">[02]</span>
+                            <h2 id="pin-title">Trabajos</h2>
+                        </div>
+                        <div class="pin-progress">
+                            <span class="pin-count" aria-hidden="true"><b id="pin-current">01</b> / 04</span>
+                            <div class="pin-ticks" role="group" aria-label="Ir a un proyecto">
+                                <button type="button" class="pin-tick" aria-label="Ferretería Pino"></button>
+                                <button type="button" class="pin-tick" aria-label="Canovelles Bàsquet Club"></button>
+                                <button type="button" class="pin-tick" aria-label="MatchCalendar"></button>
+                                <button type="button" class="pin-tick" aria-label="VortexBall"></button>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="pin-stage">
+                    <article class="pin-work">
+                        <a class="work-shot" href="https://bellit.github.io/Web-Ferreteria/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="img/ferreteria-pino-hd.jpg" alt="" width="1600" height="1012" decoding="async">
                         </a>
                         <div class="work-body">
                             <p class="work-type">Web para comercio local</p>
@@ -233,23 +245,19 @@
                             <dl class="work-case">
                                 <div>
                                     <dt>Reto</dt>
-                                    <dd>Una ferretería de proximidad desde 1985 que necesitaba transmitir su oficio y
-                                        que el cliente supiera al momento si está abierta y cómo llegar.</dd>
+                                    <dd>Una ferretería de proximidad desde 1985 que necesitaba transmitir su oficio y que el cliente supiera al momento si está abierta y cómo llegar.</dd>
                                 </div>
                                 <div>
                                     <dt>Solución</dt>
-                                    <dd>Una portada donde se corta una llave en directo, estado abierto o cerrado en
-                                        tiempo real, catálogo filtrable y una barra móvil con Llegar, Llamar y WhatsApp.</dd>
+                                    <dd>Una portada donde se corta una llave en directo, estado abierto o cerrado en tiempo real, catálogo filtrable y una barra móvil con Llegar, Llamar y WhatsApp.</dd>
                                 </div>
                             </dl>
-                            <a class="work-link" href="https://bellit.github.io/Web-Ferreteria/" target="_blank"
-                                rel="noopener">Ver la web ↗</a>
+                            <a class="work-link" href="https://bellit.github.io/Web-Ferreteria/" target="_blank" rel="noopener">Ver la web ↗</a>
                         </div>
                     </article>
-                    <article class="work">
-                        <a class="work-shot" href="https://bellit.github.io/Web-CanovellesBC/" target="_blank"
-                            rel="noopener" tabindex="-1" aria-hidden="true">
-                            <img src="img/canovelles-bc.jpg" alt="" width="800" height="506" loading="lazy">
+                    <article class="pin-work">
+                        <a class="work-shot" href="https://bellit.github.io/Web-CanovellesBC/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="img/canovelles-bc.jpg" alt="" width="1600" height="1012" decoding="async">
                         </a>
                         <div class="work-body">
                             <p class="work-type">Web para club deportivo</p>
@@ -257,24 +265,19 @@
                             <dl class="work-case">
                                 <div>
                                     <dt>Reto</dt>
-                                    <dd>Que las familias supieran en segundos si hay grupo para su hijo, dónde se
-                                        entrena y cómo apuntarse, todo desde el móvil.</dd>
+                                    <dd>Que las familias supieran en segundos si hay grupo para su hijo, dónde se entrena y cómo apuntarse, todo desde el móvil.</dd>
                                 </div>
                                 <div>
                                     <dt>Solución</dt>
-                                    <dd>Cuatro propuestas de diseño para que el club eligiera. Una gira alrededor de un
-                                        carnet de jugador: escribes el nombre y el año y te dice el grupo, con
-                                        preinscripción incluida.</dd>
+                                    <dd>Cuatro propuestas de diseño para que el club eligiera. Una gira alrededor de un carnet de jugador: escribes el nombre y el año y te dice el grupo, con preinscripción incluida.</dd>
                                 </div>
                             </dl>
-                            <a class="work-link" href="https://bellit.github.io/Web-CanovellesBC/" target="_blank"
-                                rel="noopener">Ver las propuestas ↗</a>
+                            <a class="work-link" href="https://bellit.github.io/Web-CanovellesBC/" target="_blank" rel="noopener">Ver las propuestas ↗</a>
                         </div>
                     </article>
-                    <article class="work">
-                        <a class="work-shot" href="https://bellit.github.io/MatchCalendar/" target="_blank"
-                            rel="noopener" tabindex="-1" aria-hidden="true">
-                            <img src="img/matchcalendar.jpg" alt="" width="800" height="506" loading="lazy">
+                    <article class="pin-work">
+                        <a class="work-shot" href="https://bellit.github.io/MatchCalendar/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="img/matchcalendar.jpg" alt="" width="1600" height="1012" decoding="async">
                         </a>
                         <div class="work-body">
                             <p class="work-type">Herramienta web gratuita</p>
@@ -282,23 +285,19 @@
                             <dl class="work-case">
                                 <div>
                                     <dt>Reto</dt>
-                                    <dd>Familias, jugadores y coordinadores que necesitan saber si los partidos de
-                                        varios equipos se pisan antes de que pase.</dd>
+                                    <dd>Familias, jugadores y coordinadores que necesitan saber si los partidos de varios equipos se pisan antes de que pase.</dd>
                                 </div>
                                 <div>
                                     <dt>Solución</dt>
-                                    <dd>Compara bloques de tiempo (duración más desplazamiento), importa el calendario
-                                        de la federación con solo pegarlo y funciona sin cuentas ni servidor.</dd>
+                                    <dd>Compara bloques de tiempo (duración más desplazamiento), importa el calendario de la federación con solo pegarlo y funciona sin cuentas ni servidor.</dd>
                                 </div>
                             </dl>
-                            <a class="work-link" href="https://bellit.github.io/MatchCalendar/" target="_blank"
-                                rel="noopener">Probar la herramienta ↗</a>
+                            <a class="work-link" href="https://bellit.github.io/MatchCalendar/" target="_blank" rel="noopener">Probar la herramienta ↗</a>
                         </div>
                     </article>
-                    <article class="work">
-                        <a class="work-shot" href="https://vortexball.vercel.app/" target="_blank"
-                            rel="noopener" tabindex="-1" aria-hidden="true">
-                            <img src="img/vortexball.jpg" alt="" width="1600" height="1012" loading="lazy">
+                    <article class="pin-work">
+                        <a class="work-shot" href="https://vortexball.vercel.app/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                            <img src="img/vortexball.jpg" alt="" width="1600" height="1012" decoding="async">
                         </a>
                         <div class="work-body">
                             <p class="work-type work-type-warm"><i class="px" aria-hidden="true"></i>Producto ficticio, programado con IA</p>
@@ -306,19 +305,17 @@
                             <dl class="work-case">
                                 <div>
                                     <dt>Reto</dt>
-                                    <dd>Presentar un balón con sensores que aún no existe y que se entienda qué mide
-                                        sin poder tenerlo en la mano.</dd>
+                                    <dd>Presentar un balón con sensores que aún no existe y que se entienda qué mide sin poder tenerlo en la mano.</dd>
                                 </div>
                                 <div>
                                     <dt>Solución</dt>
-                                    <dd>Una página que muestra el tiro, el bote y una sesión de ejercicios con datos de
-                                        demostración. La IA aceleró la programación.</dd>
+                                    <dd>Una página que muestra el tiro, el bote y una sesión de ejercicios con datos de demostración. La IA aceleró la programación.</dd>
                                 </div>
                             </dl>
-                            <a class="work-link" href="https://vortexball.vercel.app/" target="_blank"
-                                rel="noopener">Ver el concepto ↗</a>
+                            <a class="work-link" href="https://vortexball.vercel.app/" target="_blank" rel="noopener">Ver el concepto ↗</a>
                         </div>
                     </article>
+                    </div>
                 </div>
             </div>
         </section>

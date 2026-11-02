@@ -218,6 +218,99 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 3d. Trabajos: la sección se queda fija y el scroll va subiendo cada proyecto sobre el anterior
+    const pin = document.querySelector('.pin');
+
+    if (pin) {
+        const clamp = (value) => Math.min(1, Math.max(0, value));
+        const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+        const sticky = pin.querySelector('.pin-sticky');
+        const pinWorks = [...pin.querySelectorAll('.pin-work')];
+        const shots = pinWorks.map((work) => work.querySelector('.work-shot'));
+        const pinTicks = [...pin.querySelectorAll('.pin-tick')];
+        const pinCurrent = document.getElementById('pin-current');
+        const canPin = window.matchMedia('(min-width: 901px) and (min-height: 620px) and (prefers-reduced-motion: no-preference)');
+        const last = pinWorks.length - 1;
+        let pinFrame = 0;
+
+        const pinRange = () => pin.offsetHeight - sticky.offsetHeight;
+        const pinTop = () => parseFloat(getComputedStyle(sticky).top) || 0;
+
+        const setActiveWork = (index) => {
+            pinWorks.forEach((work, i) => work.classList.toggle('is-active', i === index));
+            pinTicks.forEach((tick, i) => {
+                if (i === index) tick.setAttribute('aria-current', 'true');
+                else tick.removeAttribute('aria-current');
+            });
+            pinCurrent.textContent = String(index + 1).padStart(2, '0');
+        };
+
+        const updatePin = () => {
+            pinFrame = 0;
+            if (!pin.classList.contains('is-pinned')) return;
+
+            const progress = clamp((pinTop() - pin.getBoundingClientRect().top) / pinRange()) * last;
+            const rise = window.innerHeight;
+
+            shots.forEach((shot, i) => {
+                // Entra desde abajo y, cuando llega el siguiente, retrocede un poco y se apaga
+                const enter = i === 0 ? 1 : ease(clamp((progress - (i - 1) - 0.2) / 0.6));
+                const leave = i === last ? 0 : ease(clamp((progress - i - 0.2) / 0.6));
+                // Del todo cubierto ya no se ve, para que no se transparente tras el siguiente
+                const gone = clamp((progress - i - 1) / 0.2);
+                shot.style.transform = `translate3d(0, ${(1 - enter) * rise}px, 0) scale(${1 - leave * 0.06})`;
+                shot.style.opacity = String((1 - leave * 0.75) * (1 - gone));
+            });
+
+            setActiveWork(Math.round(progress));
+        };
+
+        const requestPin = () => {
+            if (!pinFrame) pinFrame = requestAnimationFrame(updatePin);
+        };
+
+        const applyPinMode = () => {
+            const pinned = canPin.matches;
+            pin.classList.toggle('is-pinned', pinned);
+            pin.classList.toggle('is-revealing', !pinned && !reduceMotion);
+            if (!pinned) {
+                shots.forEach((shot) => {
+                    shot.style.transform = '';
+                    shot.style.opacity = '';
+                });
+                pinWorks.forEach((work) => work.classList.remove('is-active'));
+            }
+            requestPin();
+        };
+
+        pinTicks.forEach((tick, i) => {
+            tick.addEventListener('click', () => {
+                const start = pin.getBoundingClientRect().top + window.scrollY - pinTop();
+                window.scrollTo({ top: start + (pinRange() * i) / last, behavior: 'smooth' });
+            });
+        });
+
+        window.addEventListener('scroll', requestPin, { passive: true });
+        window.addEventListener('resize', requestPin);
+        canPin.addEventListener('change', applyPinMode);
+        applyPinMode();
+
+        // Sin sección fija, cada proyecto aparece al llegar a él
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-seen');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            pinWorks.forEach((work) => revealObserver.observe(work));
+        } else {
+            pinWorks.forEach((work) => work.classList.add('is-seen'));
+        }
+    }
+
     // 4. Borde de la cabecera al hacer scroll
     const header = document.getElementById('site-header');
     const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
