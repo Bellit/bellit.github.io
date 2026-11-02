@@ -1,0 +1,111 @@
+/* DBellido · Índice de versiones, sobre la base de la web principal (../style.css) */
+
+.versions {
+    padding-block: clamp(40px, 6vw, 72px) clamp(64px, 9vw, 112px);
+}
+
+.versions h1 {
+    margin: 0 0 32px;
+    font-weight: 600;
+    font-size: var(--fs-2xl);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.versions-title {
+    margin: clamp(48px, 7vw, 72px) 0 20px;
+    font-weight: 600;
+    font-size: var(--fs-xl);
+    letter-spacing: -0.01em;
+}
+
+.versions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.version {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+}
+
+.version:hover {
+    border-color: var(--line-strong);
+}
+
+.version img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--line);
+}
+
+.version-body {
+    padding: 20px;
+}
+
+.version h2,
+.version h3 {
+    margin: 0 0 6px;
+    font-weight: 600;
+    font-size: var(--fs-lg);
+    letter-spacing: -0.01em;
+}
+
+.version p {
+    margin: 0;
+    font-size: var(--fs-s);
+    color: var(--muted);
+}
+
+.version-current {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: center;
+}
+
+.version-current img {
+    border-bottom: 0;
+    border-right: 1px solid var(--line);
+}
+
+.version-current .version-body {
+    padding: clamp(20px, 4vw, 48px);
+}
+
+.version-current h2 {
+    font-size: var(--fs-xl);
+    line-height: 1.15;
+}
+
+.version .version-state {
+    margin-bottom: 12px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--muted);
+}
+
+.version-link {
+    display: inline-block;
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: var(--fs-s);
+    color: var(--accent);
+}
+
+@media (max-width: 900px) {
+    .versions-grid,
+    .version-current {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .version-current img {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+}

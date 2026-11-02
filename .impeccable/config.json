@@ -7,7 +7,7 @@
         "rule": "cramped-padding",
         "value": "*",
         "files": [
-          "propuesta-escaparate/index.html"
+          "Web personal VERSIONES/propuesta-escaparate/index.html"
         ],
         "createdAt": "2026-11-02T09:03:53.099Z",
         "reason": "Agent: false positive; sections, calc and FAQ have real inset via child containers and padding, verified in the browser"
@@ -16,7 +16,7 @@
         "rule": "cramped-padding",
         "value": "*",
         "files": [
-          "propuesta-escaparate-v2/index.html"
+          "index.html"
         ],
         "createdAt": "2026-11-02T09:21:52.890Z",
         "reason": "Agent: false positive; same layout as propuesta-escaparate, real inset via child containers and padding"
