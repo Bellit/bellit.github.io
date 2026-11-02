@@ -7,47 +7,6 @@
     color: var(--muted);
 }
 
-/* Portada: un trabajo real en lugar del monograma */
-.hero-work {
-    display: block;
-    overflow: hidden;
-    text-decoration: none;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    transition: border-color 0.2s;
-}
-
-.hero-work:hover {
-    border-color: var(--line-strong);
-}
-
-.hero-work img {
-    width: 100%;
-    height: auto;
-}
-
-.hero-work-caption {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 4px 16px;
-    padding: 14px 16px;
-    font-size: var(--fs-s);
-    color: var(--muted);
-    border-top: 1px solid var(--line);
-}
-
-.hero-work-caption strong {
-    color: var(--text);
-    font-weight: 600;
-}
-
-.hero-work-link {
-    font-weight: 600;
-    color: var(--accent);
-}
-
 .hero-rotator {
     margin-top: 20px;
 }

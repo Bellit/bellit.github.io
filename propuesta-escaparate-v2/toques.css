@@ -25,6 +25,108 @@
     color: var(--text);
 }
 
+/* El rótulo es la cabecera de la animación: dice qué están formando las piezas */
+.hero::before {
+    display: none;
+}
+
+.hero {
+    padding-block: clamp(40px, 6vw, 72px) clamp(48px, 7vw, 88px);
+}
+
+.hero-show {
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.hero-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 56px;
+    padding: 8px 12px 8px 20px;
+    border-bottom: 1px solid var(--line);
+}
+
+.hero-bar .hero-rotator {
+    min-height: 0;
+    margin: 0;
+}
+
+.hero-ticks {
+    display: flex;
+    flex: none;
+}
+
+.hero-tick {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.hero-tick::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: var(--line-strong);
+}
+
+.hero-tick:hover::before {
+    background: var(--text);
+}
+
+.hero-tick[aria-current]::before {
+    background: var(--accent);
+}
+
+/* Las mismas piezas se reordenan sobre una retícula a la vista */
+.hero-stage {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: var(--bg);
+    background-image: radial-gradient(var(--line) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.hero-stage i {
+    position: absolute;
+    inset: 0;
+    display: block;
+    background: #3A3A47;
+    transform-origin: 0 0;
+    transform: translate(50%, 50%) scale(0);
+    will-change: transform;
+    transition: transform 0.9s cubic-bezier(0.7, 0, 0.15, 1), background-color 0.5s ease-out;
+    transition-delay: calc(var(--n) * 25ms);
+}
+
+.hero-stage i.t-w {
+    background: var(--text);
+}
+
+.hero-stage i.t-a {
+    background: var(--accent);
+}
+
+.hero-stage i.t-h {
+    background: var(--warm);
+}
+
+@media (min-width: 901px) {
+    .hero-inner {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    }
+}
+
 /* ---------- Servicios: la especialidad, a todo el ancho ---------- */
 
 .services {
@@ -218,8 +320,26 @@
     }
 }
 
+@media (max-width: 480px) {
+    .hero-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 12px 12px 8px 16px;
+    }
+
+    .hero-bar .hero-rotator {
+        font-size: var(--fs-s);
+    }
+
+    .hero-ticks {
+        margin-left: -9px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    .step-px i {
+    .step-px i,
+    .hero-stage i {
         transition: none;
     }
 }
