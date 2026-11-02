@@ -1,0 +1,49 @@
+/* DBellido · Quién hay detrás: una carta en primera persona que se enciende al leerla */
+
+.letter {
+    max-width: 24em;
+    margin: 0;
+    font-size: var(--fs-2xl);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+}
+
+.letter p {
+    margin: 0 0 0.7em;
+}
+
+.letter-sign {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: calc(var(--fs-2xl) * 24);
+    margin: 16px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.letter-sign svg {
+    flex: none;
+    width: 40px;
+    height: 40px;
+}
+
+.letter-sign .px-d {
+    fill: var(--text);
+}
+
+.letter-sign .px-b {
+    fill: var(--accent);
+}
+
+.letter-sign strong {
+    display: block;
+    font-weight: 600;
+}
+
+.letter-sign-text span {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--warm);
+}

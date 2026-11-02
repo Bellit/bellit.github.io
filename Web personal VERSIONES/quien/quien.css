@@ -1,0 +1,279 @@
+/* DBellido · Comparación de propuestas para la sección Quién hay detrás */
+
+.section-head:not(.section-head-row) {
+    top: 150px;
+}
+
+/* Hueco final para poder recorrer la sección entera en esta página de prueba */
+main {
+    padding-bottom: 50svh;
+}
+
+.who-mark {
+    flex: none;
+    width: 40px;
+    height: 40px;
+}
+
+.who-mark .px-d {
+    fill: var(--text);
+}
+
+.who-mark .px-b {
+    fill: var(--accent);
+}
+
+/* ---------- Propuesta A: carta ---------- */
+
+.letter {
+    max-width: 24em;
+    margin: 0;
+    font-size: var(--fs-2xl);
+    font-weight: 500;
+    line-height: 1.32;
+    letter-spacing: -0.015em;
+}
+
+.letter p {
+    margin: 0 0 0.7em;
+}
+
+.letter-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 32px;
+    max-width: calc(var(--fs-2xl) * 24);
+    margin-top: 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.letter-sign {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0;
+}
+
+.letter-sign strong {
+    display: block;
+    font-weight: 600;
+}
+
+.letter-sign-text span {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--warm);
+}
+
+/* ---------- Propuesta B: trayectoria ---------- */
+
+.career-intro {
+    max-width: 62ch;
+}
+
+.career-intro .lead {
+    margin: 0 0 16px;
+    font-size: var(--fs-xl);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.career-intro p:not(.lead) {
+    margin: 0;
+    color: var(--muted);
+}
+
+.career {
+    margin-top: clamp(48px, 7vw, 72px);
+}
+
+/* Un carril a escala: cada columna es medio año entre 2005 y 2026 */
+.career-bar {
+    display: grid;
+    grid-template-columns: repeat(42, minmax(0, 1fr));
+    gap: 3px 0;
+}
+
+.career-seg {
+    height: 56px;
+    margin-right: 3px;
+    padding: 0;
+    background: #3A3A47;
+    border: 0;
+    border-radius: var(--radius-s);
+    cursor: pointer;
+    transform-origin: left;
+    transition: transform 0.7s cubic-bezier(0.7, 0, 0.15, 1), opacity 0.2s, outline-color 0.2s;
+    transition-delay: calc(var(--n) * 70ms), 0s, 0s;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.career-seg.is-dev {
+    background: var(--accent);
+}
+
+.career-seg.is-long {
+    background: var(--warm);
+}
+
+.career-seg:hover {
+    opacity: 0.8;
+}
+
+.career-seg[aria-current] {
+    outline-color: var(--text);
+}
+
+.career-bar.is-waiting .career-seg {
+    transform: scaleX(0);
+}
+
+.career-years {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--muted);
+    list-style: none;
+}
+
+.career-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin: 16px 0 0;
+    padding: 0;
+    font-size: var(--fs-s);
+    color: var(--muted);
+    list-style: none;
+}
+
+.career-legend li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.career-legend i {
+    flex: none;
+    width: 10px;
+    height: 10px;
+    background: #3A3A47;
+}
+
+.career-legend li:nth-child(1) i {
+    background: var(--warm);
+}
+
+.career-legend li:nth-child(2) i {
+    background: var(--accent);
+}
+
+.career-jobs {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.career-job {
+    display: grid;
+    grid-template-columns: minmax(0, 170px) minmax(0, 1fr);
+    gap: 4px 24px;
+    padding: 20px 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.career-job + .career-job {
+    margin-top: 8px;
+}
+
+.career-when {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+.career-job h3 {
+    margin: 0 0 4px;
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.career-job h3 span {
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.career-job p {
+    grid-column: 2;
+    margin: 0;
+    color: var(--muted);
+}
+
+.career-job div {
+    min-width: 0;
+}
+
+.career-link {
+    margin-top: 16px;
+}
+
+/* En escritorio se ve solo el puesto elegido, siempre con la misma altura */
+@media (min-width: 901px) {
+    .career-jobs.is-live {
+        display: grid;
+    }
+
+    .career-jobs.is-live .career-job {
+        grid-area: 1 / 1;
+        margin-top: 0;
+    }
+
+    .career-jobs.is-live .career-job:not(.is-active) {
+        visibility: hidden;
+    }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+    .section-head:not(.section-head-row) {
+        top: auto;
+    }
+
+    .career-seg {
+        height: 32px;
+        margin-right: 2px;
+        pointer-events: none;
+    }
+
+    .career-seg[aria-current] {
+        outline-color: transparent;
+    }
+
+    .career-job {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 16px;
+    }
+
+    .career-job p {
+        grid-column: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .career-seg {
+        transition: none;
+    }
+}

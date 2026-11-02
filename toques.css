@@ -175,27 +175,6 @@
     color: var(--warm);
 }
 
-/* ---------- Quién hay detrás ---------- */
-
-#sobre-mi .prose .lead {
-    font-size: var(--fs-xl);
-    line-height: 1.4;
-    letter-spacing: -0.01em;
-}
-
-.about-sign {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-}
-
-.prose p.about-sign {
-    margin-bottom: 24px;
-    color: var(--warm);
-}
-
 /* ---------- Contacto: la invitación en la voz de Daniel ---------- */
 
 .contact-side .contact-intro {

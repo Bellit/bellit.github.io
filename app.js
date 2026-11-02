@@ -221,6 +221,48 @@ document.addEventListener('DOMContentLoaded', () => {
         updateWorries();
     }
 
+    // 3e. Quién hay detrás: el texto se enciende palabra a palabra al bajar
+    const letter = document.getElementById('letter');
+
+    if (letter && !reduceMotion) {
+        const letterWords = [];
+        let letterFrame = 0;
+
+        letter.querySelectorAll('p').forEach((paragraph) => {
+            const parts = paragraph.textContent.trim().split(/\s+/);
+            paragraph.setAttribute('aria-label', parts.join(' '));
+            paragraph.textContent = '';
+            parts.forEach((part, i) => {
+                const word = document.createElement('span');
+                word.setAttribute('aria-hidden', 'true');
+                word.textContent = part;
+                paragraph.append(word);
+                if (i < parts.length - 1) paragraph.append(' ');
+                letterWords.push(word);
+            });
+        });
+
+        const updateLetter = () => {
+            letterFrame = 0;
+            const box = letter.getBoundingClientRect();
+            const start = window.innerHeight * 0.8;
+            const end = window.innerHeight * 0.45;
+            const progress = Math.min(1, Math.max(0, (start - box.top) / (box.height + start - end)));
+            const lit = progress * letterWords.length;
+            letterWords.forEach((word, i) => {
+                word.style.opacity = String(0.22 + 0.78 * Math.min(1, Math.max(0, lit - i)));
+            });
+        };
+
+        const requestLetter = () => {
+            if (!letterFrame) letterFrame = requestAnimationFrame(updateLetter);
+        };
+
+        window.addEventListener('scroll', requestLetter, { passive: true });
+        window.addEventListener('resize', requestLetter);
+        updateLetter();
+    }
+
     // 3c. Servicios: una necesidad abierta cada vez, con un marcador que viaja por la lista
     const needs = document.getElementById('needs');
 
