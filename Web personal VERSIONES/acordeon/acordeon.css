@@ -1,0 +1,124 @@
+/* DBellido · Preguntas frecuentes en acordeón: alternativa guardada a la conversación */
+
+.fold-side {
+    margin: 24px 0 0;
+    color: var(--muted);
+}
+
+.fold-side a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.fold-side a:hover {
+    text-decoration: underline;
+}
+
+.fold {
+    border-top: 1px solid var(--line);
+}
+
+.fold-item {
+    border-bottom: 1px solid var(--line);
+}
+
+.fold-item h3 {
+    margin: 0;
+}
+
+.fold-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    min-height: 76px;
+    padding: 16px 0;
+    font: inherit;
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: var(--muted);
+    background: none;
+    border: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.fold-btn:hover,
+.fold-btn[aria-expanded='true'] {
+    color: var(--text);
+}
+
+/* Un signo + hecho con píxeles, que al abrir pierde el trazo vertical */
+.fold-icon {
+    position: relative;
+    flex: none;
+    width: 14px;
+    height: 14px;
+}
+
+.fold-icon::before,
+.fold-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--line-strong);
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.15, 1), background-color 0.2s;
+}
+
+.fold-icon::before {
+    inset: 5px 0;
+}
+
+.fold-icon::after {
+    inset: 0 5px;
+}
+
+.fold-btn[aria-expanded='true'] .fold-icon::before,
+.fold-btn[aria-expanded='true'] .fold-icon::after {
+    background: var(--warm);
+}
+
+.fold-btn[aria-expanded='true'] .fold-icon::after {
+    transform: scaleY(0);
+}
+
+.fold-panel {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.fold-panel > div {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.fold-panel p {
+    max-width: 58ch;
+    margin: 0;
+    padding-bottom: 24px;
+    color: var(--muted);
+}
+
+.fold.is-live .fold-panel.is-closed {
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s 0.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fold-btn,
+    .fold-icon::before,
+    .fold-icon::after,
+    .fold-panel,
+    .fold.is-live .fold-panel.is-closed {
+        transition: none;
+    }
+}

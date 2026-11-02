@@ -11,7 +11,7 @@ Web personal de Daniel Bellido (DBellido), publicada con GitHub Pages desde la r
 - `css/cv.css`: estilos propios del currículum.
 - `js/app.js`: comportamiento de ambas páginas.
 - `img/`: capturas de los trabajos.
-- `Web personal VERSIONES/`: versiones anteriores y propuestas de diseño, sin indexar. Es independiente de `css/` y `js/`; solo reutiliza `img/` y el favicon.
+- `Web personal VERSIONES/`: alternativas de diseño guardadas, sin indexar. Comparte `css/base.css` con la web.
 
 ## En local
 
