@@ -3,8 +3,49 @@
 .hero-sub {
     max-width: 560px;
     margin: 24px 0 0;
-    font-size: clamp(17px, 1.8vw, 19px);
+    font-size: clamp(17px, 1.6vw, 20px);
     color: var(--muted);
+}
+
+/* Portada: un trabajo real en lugar del monograma */
+.hero-work {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+}
+
+.hero-work:hover {
+    border-color: var(--line-strong);
+}
+
+.hero-work img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-work-caption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 16px;
+    padding: 14px 16px;
+    font-size: var(--fs-s);
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+}
+
+.hero-work-caption strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.hero-work-link {
+    font-weight: 600;
+    color: var(--accent);
 }
 
 .hero-rotator {
@@ -13,14 +54,12 @@
 
 .section-head-row {
     position: static;
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
     margin-bottom: clamp(32px, 5vw, 56px);
 }
 
-.section-head-row .section-num {
-    margin: 0;
+/* Banda de otro tono para cambiar el ritmo de la página */
+.section-band {
+    background: var(--surface);
 }
 
 /* ---------- Para quién ---------- */
@@ -46,14 +85,13 @@
 
 .audience-tag {
     margin: 0 0 8px;
-    font-family: var(--font-mono);
-    font-weight: 700;
-    color: var(--accent);
+    font-weight: 600;
+    color: var(--text);
 }
 
 .audience p:not(.audience-tag) {
     margin: 0;
-    font-size: 15px;
+    font-size: var(--fs-s);
     color: var(--muted);
 }
 
@@ -72,26 +110,19 @@
     padding: clamp(24px, 3vw, 32px);
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 20px;
+    border-radius: var(--radius);
     transition: border-color 0.2s;
 }
 
 .service:hover {
-    border-color: var(--accent-deep);
-}
-
-.service-num,
-.step-num {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--accent);
+    border-color: var(--line-strong);
 }
 
 .service h3 {
     margin: 0;
-    font-family: var(--font-mono);
-    font-size: clamp(20px, 2.2vw, 24px);
-    letter-spacing: -0.03em;
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .service p {
@@ -126,8 +157,8 @@
     display: block;
     overflow: hidden;
     border: 1px solid var(--line);
-    border-radius: 16px;
-    background: var(--surface);
+    border-radius: var(--radius);
+    background: var(--bg);
 }
 
 .work-shot img {
@@ -143,16 +174,16 @@
 .work-type {
     margin: 0 0 6px;
     font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--accent);
+    font-size: var(--fs-xs);
+    color: var(--muted);
 }
 
 .work h3 {
     margin: 0 0 20px;
-    font-family: var(--font-mono);
-    font-size: clamp(24px, 2.8vw, 32px);
+    font-size: var(--fs-xl);
+    font-weight: 600;
     line-height: 1.15;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
 }
 
 .work-case {
@@ -164,7 +195,7 @@
 
 .work-case dt {
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: var(--fs-xs);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--muted);
@@ -179,8 +210,7 @@
     display: inline-flex;
     align-items: center;
     min-height: 44px;
-    font-family: var(--font-mono);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--accent);
     text-decoration: none;
     border-bottom: 2px solid transparent;
@@ -201,9 +231,9 @@
 
 .ai-col h3 {
     margin: 0 0 12px;
-    font-family: var(--font-mono);
-    font-size: 20px;
-    letter-spacing: -0.02em;
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .ai-col > p {
@@ -237,7 +267,7 @@
     padding: 14px 16px 14px 38px;
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-radius: var(--radius-m);
 }
 
 .ai-benefits li::before,
@@ -246,9 +276,9 @@
     position: absolute;
     left: 0;
     top: 0.6em;
-    width: 8px;
-    height: 8px;
-    background: var(--accent);
+    width: 6px;
+    height: 6px;
+    background: var(--muted);
 }
 
 .ai-examples li::before {
@@ -261,8 +291,8 @@
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
     margin-top: clamp(40px, 6vw, 64px);
     background: var(--surface);
-    border: 1px solid var(--accent-deep);
-    border-radius: 20px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
     overflow: hidden;
 }
 
@@ -275,14 +305,14 @@
 
 .calc-intro h3 {
     margin: 0 0 6px;
-    font-family: var(--font-mono);
-    font-size: 20px;
-    letter-spacing: -0.02em;
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .calc-intro p {
     margin: 0;
-    font-size: 15px;
+    font-size: var(--fs-s);
     color: var(--muted);
 }
 
@@ -301,8 +331,7 @@
 }
 
 .calc-field label {
-    font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: var(--fs-s);
     color: var(--muted);
     white-space: nowrap;
 }
@@ -311,8 +340,8 @@
     display: flex;
     align-items: center;
     background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 12px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-m);
     transition: border-color 0.15s;
 }
 
@@ -327,7 +356,7 @@
     padding: 0 8px 0 16px;
     font-family: var(--font-mono);
     font-weight: 700;
-    font-size: 22px;
+    font-size: var(--fs-lg);
     color: var(--text);
     background: none;
     border: 0;
@@ -337,7 +366,7 @@
 .calc-input span {
     padding: 0 16px 0 8px;
     font-family: var(--font-mono);
-    font-size: 14px;
+    font-size: var(--fs-xs);
     color: var(--muted);
 }
 
@@ -352,10 +381,10 @@
     display: flex;
     align-items: center;
     height: 56px;
-    margin-top: calc(13px * 1.6 + 8px);
+    margin-top: calc(var(--fs-s) * 1.6 + 8px);
     font-family: var(--font-mono);
-    font-size: 22px;
-    color: var(--accent);
+    font-size: var(--fs-lg);
+    color: var(--muted);
 }
 
 .calc-result {
@@ -371,14 +400,14 @@
 .calc-number {
     font-family: var(--font-mono);
     font-weight: 700;
-    font-size: clamp(44px, 5.4vw, 64px);
+    font-size: var(--fs-display);
     line-height: 1;
     letter-spacing: -0.04em;
     color: var(--accent);
 }
 
 .calc-label {
-    font-size: 16px;
+    font-size: var(--fs-s);
     color: var(--text);
 }
 
@@ -400,7 +429,7 @@
 .contact-side .contact-title {
     margin-bottom: 8px;
     font-size: 20px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 
 .contact-side .contact-intro > p:not(.contact-title) {
@@ -423,31 +452,20 @@
 }
 
 .step {
-    position: relative;
     padding-top: 20px;
-    border-top: 2px solid var(--line);
-}
-
-.step::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: 0;
-    width: 32px;
-    height: 2px;
-    background: var(--accent);
+    border-top: 1px solid var(--line-strong);
 }
 
 .step h3 {
-    margin: 8px 0;
-    font-family: var(--font-mono);
-    font-size: 18px;
-    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+    font-size: var(--fs-body);
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .step p {
     margin: 0;
-    font-size: 15px;
+    font-size: var(--fs-s);
     color: var(--muted);
 }
 
@@ -469,7 +487,7 @@
     min-height: 64px;
     padding: 12px 0;
     font-weight: 600;
-    font-size: 18px;
+    font-size: var(--fs-body);
     cursor: pointer;
     list-style: none;
 }
@@ -482,8 +500,8 @@
     content: '+';
     flex: none;
     font-family: var(--font-mono);
-    font-size: 22px;
-    color: var(--accent);
+    font-size: var(--fs-lg);
+    color: var(--muted);
 }
 
 .faq details[open] summary::after {
@@ -505,8 +523,8 @@
     font: inherit;
     color: var(--text);
     background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 10px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-m);
 }
 
 .field select:focus {
@@ -564,7 +582,6 @@
 
     .calc-input input {
         padding-left: 12px;
-        font-size: 19px;
     }
 
     .calc-input span {

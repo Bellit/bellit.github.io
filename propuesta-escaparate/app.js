@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Monograma de píxeles: se dibuja píxel a píxel a partir de un mapa de bits
+    // 1. Monograma de píxeles: cada letra es una sola forma a partir de un mapa de bits, sin juntas al escalar
     const mark = document.getElementById('pixel-mark');
     const bitmap = [
         'DDDD..BBBB.',
@@ -13,20 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mark) {
         const svgNS = 'http://www.w3.org/2000/svg';
-        let i = 0;
-        bitmap.forEach((row, y) => {
-            [...row].forEach((cell, x) => {
-                if (cell === '.') return;
-                const rect = document.createElementNS(svgNS, 'rect');
-                rect.setAttribute('x', x);
-                rect.setAttribute('y', y);
-                // Un pelín más de 1 para que no se vean juntas entre píxeles al escalar
-                rect.setAttribute('width', 1.04);
-                rect.setAttribute('height', 1.04);
-                rect.setAttribute('class', cell === 'D' ? 'px-d' : 'px-b');
-                rect.style.setProperty('--i', i++);
-                mark.appendChild(rect);
+        ['D', 'B'].forEach((letter, i) => {
+            let d = '';
+            bitmap.forEach((row, y) => {
+                [...row].forEach((cell, x) => {
+                    if (cell === letter) d += `M${x} ${y}h1v1h-1z`;
+                });
             });
+            const path = document.createElementNS(svgNS, 'path');
+            path.setAttribute('d', d);
+            path.setAttribute('class', letter === 'D' ? 'px-d' : 'px-b');
+            path.style.setProperty('--i', i);
+            mark.appendChild(path);
         });
     }
 
