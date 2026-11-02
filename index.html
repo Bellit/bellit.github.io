@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="toques.css">
     <link rel="stylesheet" href="necesidades.css">
     <link rel="stylesheet" href="trabajos.css">
+    <link rel="stylesheet" href="ia.css">
 </head>
 
 <body>
@@ -321,76 +322,76 @@
         </section>
 
         <!-- IA -->
-        <section class="section section-ai" id="ia">
+        <section class="section" id="ia">
             <div class="container">
                 <header class="section-head section-head-row">
                     <span class="section-num">[03]</span>
                     <h2>IA con los pies en el suelo</h2>
                 </header>
-                <div class="ai-grid">
-                    <div class="ai-col">
-                        <h3>Cómo la uso hoy</h3>
-                        <p>Programo con asistentes de IA para quitarme el trabajo mecánico: código repetitivo, pruebas,
-                            documentación. El criterio, la revisión y las decisiones siguen siendo míos.</p>
-                        <ul class="ai-benefits">
-                            <li><strong>Entregas antes.</strong> Menos horas en lo mecánico, más en lo que importa.</li>
-                            <li><strong>Presupuestos más ajustados.</strong> Pagas criterio y resultado, no horas
-                                tecleando.</li>
-                            <li><strong>Misma calidad.</strong> Todo el código pasa por mis manos antes de llegar a ti.
-                            </li>
-                        </ul>
-                        <p class="ai-proof">
-                            <strong><i class="px" aria-hidden="true"></i>Un ejemplo</strong>
-                            <a href="https://vortexball.vercel.app/" target="_blank" rel="noopener">VortexBall ↗</a>,
-                            un producto ficticio cuya web programé con IA para acelerar el proceso.
-                        </p>
-                    </div>
-                    <div class="ai-col">
-                        <h3>Qué puede hacer por tu negocio</h3>
-                        <ul class="ai-examples">
-                            <li>Escribir descripciones de producto para tu tienda a partir de una foto o unas notas.</li>
-                            <li>Responder las preguntas de siempre (horarios, envíos, inscripciones) en tu web, a
-                                cualquier hora.</li>
-                            <li>Leer emails o pedidos y ordenarlos por tipo o urgencia.</li>
-                            <li>Pasar datos de un PDF o un Excel a tu sistema sin copiarlos a mano.</li>
-                        </ul>
-                    </div>
+                <div class="ai-intro">
+                    <p class="ai-statement">Programo con IA para ir más rápido. Lo que hay que decidir, lo decido yo.</p>
+                    <p>Me quita de encima el trabajo mecánico: código repetitivo, pruebas y modificaciones.</p>
                 </div>
 
-                <form class="calc" id="calc" aria-labelledby="calc-title">
-                    <div class="calc-main">
-                        <div class="calc-intro">
-                            <h3 id="calc-title">Antes de automatizar, mide</h3>
-                            <p>¿Cuánto tiempo se va en tareas repetitivas? Pon tus números.</p>
-                        </div>
-                        <div class="calc-fields">
-                            <div class="calc-field">
-                                <label for="calc-hours">Horas a la semana</label>
-                                <div class="calc-input">
-                                    <input type="number" id="calc-hours" min="0" max="60" step="0.5" value="4"
-                                        inputmode="decimal">
-                                    <span aria-hidden="true">h</span>
-                                </div>
-                                <p class="calc-hint">por persona</p>
-                            </div>
-                            <span class="calc-op" aria-hidden="true">×</span>
-                            <div class="calc-field">
-                                <label for="calc-people">Personas</label>
-                                <div class="calc-input">
-                                    <input type="number" id="calc-people" min="1" max="200" step="1" value="2"
-                                        inputmode="numeric">
-                                    <span aria-hidden="true">pers.</span>
-                                </div>
-                                <p class="calc-hint">que hacen esas tareas</p>
-                            </div>
-                        </div>
+                <div class="ai-flow" id="ai-flow">
+                    <span class="ai-lane ai-lane-me" aria-hidden="true">Yo</span>
+                    <span class="ai-lane ai-lane-ai" aria-hidden="true">IA</span>
+                    <ol class="ai-steps">
+                        <li class="ai-step">
+                            <h3>Entender</h3>
+                            <p>Qué necesitas y qué te frena.</p>
+                        </li>
+                        <li class="ai-step">
+                            <h3>Decidir</h3>
+                            <p>Qué se hace y cómo se hace.</p>
+                        </li>
+                        <li class="ai-step">
+                            <h3>Programar</h3>
+                            <p>Con IA, el código repetitivo va mucho más rápido.</p>
+                        </li>
+                        <li class="ai-step">
+                            <h3>Probar</h3>
+                            <p>Con IA, las pruebas cubren más en menos tiempo.</p>
+                        </li>
+                        <li class="ai-step">
+                            <h3>Modificar</h3>
+                            <p>Con IA, los cambios se aplican antes.</p>
+                        </li>
+                        <li class="ai-step">
+                            <h3>Revisar</h3>
+                            <p>Todo el código pasa por mis manos antes de llegar a ti.</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="ai-gains">
+                    <ul class="ai-gains-list">
+                        <li><strong>Entregas antes</strong>Menos horas en lo mecánico, más en lo que importa.</li>
+                        <li><strong>Presupuestos más ajustados</strong>Pagas criterio y resultado, no horas tecleando.</li>
+                        <li><strong>Misma calidad</strong>La IA acelera el trabajo, no sustituye la revisión.</li>
+                    </ul>
+                    <a class="ai-case" href="https://vortexball.vercel.app/" target="_blank" rel="noopener">
+                        <img src="img/vortexball.jpg" alt="Portada de la web de VortexBall" width="1600" height="1012" loading="lazy">
+                        <span class="ai-case-body">
+                            <span><strong>VortexBall</strong> · Producto ficticio, programado con IA</span>
+                            <span class="ai-case-link">Ver el ejemplo ↗</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="ai-ideas">
+                    <div class="ai-ideas-copy">
+                        <h3>¿Y aplicarla a tu negocio?</h3>
+                        <p>Si tienes una tarea repetitiva en mente, la miramos y te digo si tiene sentido automatizarla.</p>
+                        <a class="ai-ideas-cta" href="#contacto" data-project="Automatizar tareas con IA">Cuéntame cuál →</a>
                     </div>
-                    <output class="calc-result" id="calc-result" for="calc-hours calc-people">
-                        <span class="calc-number"><span id="calc-number">368</span> h</span>
-                        <span class="calc-label">al año en tareas que una máquina podría hacer</span>
-                        <span class="calc-note">Calculado sobre 46 semanas laborables.</span>
-                    </output>
-                </form>
+                    <ul>
+                        <li>Escribir descripciones de producto a partir de una foto o unas notas.</li>
+                        <li>Responder las preguntas de siempre (horarios, envíos, inscripciones) en tu web.</li>
+                        <li>Leer emails o pedidos y ordenarlos por tipo o urgencia.</li>
+                        <li>Pasar datos de un PDF o un Excel a tu sistema sin copiarlos a mano.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 

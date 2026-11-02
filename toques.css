@@ -175,52 +175,6 @@
     color: var(--warm);
 }
 
-/* ---------- IA ---------- */
-
-.ai-proof {
-    display: block;
-    margin-top: 24px;
-    padding-top: 20px;
-    color: var(--muted);
-    border-top: 1px solid var(--line);
-}
-
-.ai-proof strong {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 6px;
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    font-weight: 400;
-    color: var(--warm);
-}
-
-.ai-proof a {
-    font-weight: 600;
-    color: var(--accent);
-    text-underline-offset: 3px;
-}
-
-/* El resultado de la calculadora ocupa su bloque con el color de marca */
-.calc-result {
-    background: var(--accent);
-    border-color: transparent;
-}
-
-.calc-number,
-.calc-label {
-    color: var(--accent-ink);
-}
-
-.calc-label {
-    font-weight: 500;
-}
-
-.calc-note {
-    color: var(--accent-ink);
-}
-
 /* ---------- Proceso: el proyecto se completa píxel a píxel ---------- */
 
 .step-px {

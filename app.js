@@ -144,22 +144,27 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(() => requestAnimationFrame(() => { if (!started) show(0); }));
     }
 
-    // 3. Calculadora de horas en tareas repetitivas (46 semanas laborables al año)
-    const calcHours = document.getElementById('calc-hours');
-    const calcPeople = document.getElementById('calc-people');
-    const calcNumber = document.getElementById('calc-number');
-    const WORK_WEEKS = 46;
+    // 3. IA: los carriles del esquema se dibujan al llegar a ellos (sin JS se ven completos)
+    const aiFlow = document.getElementById('ai-flow');
 
-    if (calcHours && calcPeople && calcNumber) {
-        const update = () => {
-            const hours = Math.max(0, parseFloat(calcHours.value) || 0);
-            const people = Math.max(0, parseInt(calcPeople.value, 10) || 0);
-            calcNumber.textContent = Math.round(hours * people * WORK_WEEKS).toLocaleString('es-ES');
-        };
-        calcHours.addEventListener('input', update);
-        calcPeople.addEventListener('input', update);
-        document.getElementById('calc').addEventListener('submit', (e) => e.preventDefault());
-        update();
+    if (aiFlow && !reduceMotion && 'IntersectionObserver' in window) {
+        aiFlow.classList.add('is-waiting');
+        const aiFlowObserver = new IntersectionObserver((entries) => {
+            if (entries.some((entry) => entry.isIntersecting)) {
+                aiFlow.classList.remove('is-waiting');
+                aiFlowObserver.disconnect();
+            }
+        }, { threshold: 0.3 });
+        aiFlowObserver.observe(aiFlow);
+    }
+
+    const aiIdeasCta = document.querySelector('.ai-ideas-cta');
+
+    if (aiIdeasCta) {
+        aiIdeasCta.addEventListener('click', () => {
+            const projectType = document.getElementById('project-type');
+            if (projectType) projectType.value = aiIdeasCta.dataset.project;
+        });
     }
 
     // 3b. Los pasos del proceso se completan al llegar a ellos (sin JS se ven completos)

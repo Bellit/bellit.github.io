@@ -180,201 +180,6 @@
     border-bottom-color: var(--accent);
 }
 
-/* ---------- IA ---------- */
-
-.ai-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(32px, 5vw, 64px);
-}
-
-.ai-col h3 {
-    margin: 0 0 12px;
-    font-size: var(--fs-lg);
-    font-weight: 600;
-    letter-spacing: -0.01em;
-}
-
-.ai-col > p {
-    margin: 0 0 20px;
-    color: var(--muted);
-}
-
-.ai-benefits,
-.ai-examples {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.ai-benefits li {
-    position: relative;
-    padding-left: 22px;
-    color: var(--muted);
-}
-
-.ai-benefits strong {
-    color: var(--text);
-    font-weight: 600;
-}
-
-.ai-examples li {
-    position: relative;
-    padding: 14px 16px 14px 38px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-m);
-}
-
-.ai-benefits li::before,
-.ai-examples li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.6em;
-    width: 6px;
-    height: 6px;
-    background: var(--muted);
-}
-
-.ai-examples li::before {
-    left: 16px;
-    top: 1.45em;
-}
-
-.calc {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-    margin-top: clamp(40px, 6vw, 64px);
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-}
-
-.calc-main {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    padding: clamp(24px, 3vw, 36px);
-}
-
-.calc-intro h3 {
-    margin: 0 0 6px;
-    font-size: var(--fs-lg);
-    font-weight: 600;
-    letter-spacing: -0.01em;
-}
-
-.calc-intro p {
-    margin: 0;
-    font-size: var(--fs-s);
-    color: var(--muted);
-}
-
-/* Dos campos y el signo «×» en la misma fila, alineados por arriba */
-.calc-fields {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: start;
-    column-gap: 16px;
-}
-
-.calc-field {
-    display: grid;
-    grid-template-rows: auto 56px auto;
-    row-gap: 8px;
-}
-
-.calc-field label {
-    font-size: var(--fs-s);
-    color: var(--muted);
-    white-space: nowrap;
-}
-
-.calc-input {
-    display: flex;
-    align-items: center;
-    background: var(--bg);
-    border: 1px solid var(--line-strong);
-    border-radius: var(--radius-m);
-    transition: border-color 0.15s;
-}
-
-.calc-input:focus-within {
-    border-color: var(--accent);
-}
-
-.calc-input input {
-    flex: 1;
-    min-width: 0;
-    height: 100%;
-    padding: 0 8px 0 16px;
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: var(--fs-lg);
-    color: var(--text);
-    background: none;
-    border: 0;
-    outline: none;
-}
-
-.calc-input span {
-    padding: 0 16px 0 8px;
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    color: var(--muted);
-}
-
-.calc-hint {
-    margin: 0;
-    font-size: 13px;
-    color: var(--muted);
-}
-
-.calc-op {
-    /* centrado sobre la caja del input: altura de la etiqueta + separación */
-    display: flex;
-    align-items: center;
-    height: 56px;
-    margin-top: calc(var(--fs-s) * 1.6 + 8px);
-    font-family: var(--font-mono);
-    font-size: var(--fs-lg);
-    color: var(--muted);
-}
-
-.calc-result {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-    padding: clamp(24px, 3vw, 36px);
-    background: var(--surface-2);
-    border-left: 1px solid var(--line);
-}
-
-.calc-number {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: var(--fs-display);
-    line-height: 1;
-    letter-spacing: -0.04em;
-    color: var(--accent);
-}
-
-.calc-label {
-    font-size: var(--fs-s);
-    color: var(--text);
-}
-
-.calc-note {
-    font-size: 13px;
-    color: var(--muted);
-}
-
 /* ---------- Contacto: texto bajo el título, formulario a la derecha ---------- */
 
 .section-contact .section-grid {
@@ -498,15 +303,6 @@
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1000px) {
-    .calc {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .calc-result {
-        border-left: 0;
-        border-top: 1px solid var(--line);
-    }
-
     .steps {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         row-gap: 32px;
@@ -522,7 +318,6 @@
         order: 0;
     }
 
-    .ai-grid,
     .section-contact .section-grid {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -534,24 +329,10 @@
     .steps {
         grid-template-columns: minmax(0, 1fr);
     }
-
-    .calc-fields {
-        column-gap: 10px;
-    }
-
-    .calc-input input {
-        padding-left: 12px;
-    }
-
-    .calc-input span {
-        padding-right: 12px;
-    }
 }
 
 /* Líneas de lectura cómodas: como máximo ~70 caracteres */
 .work-case dd,
-.ai-col > p,
-.ai-examples li,
 .prose p {
     max-width: 58ch;
 }
