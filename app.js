@@ -228,17 +228,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const letterWords = [];
         let letterFrame = 0;
 
-        letter.querySelectorAll('p').forEach((paragraph) => {
-            const parts = paragraph.textContent.trim().split(/\s+/);
-            paragraph.setAttribute('aria-label', parts.join(' '));
-            paragraph.textContent = '';
-            parts.forEach((part, i) => {
+        // Parte el texto en palabras sin perder las que van resaltadas
+        const splitWords = (target, text) => {
+            text.split(/(\s+)/).forEach((part) => {
+                if (!part) return;
+                if (/^\s+$/.test(part)) {
+                    target.append(' ');
+                    return;
+                }
                 const word = document.createElement('span');
                 word.setAttribute('aria-hidden', 'true');
                 word.textContent = part;
-                paragraph.append(word);
-                if (i < parts.length - 1) paragraph.append(' ');
+                target.append(word);
                 letterWords.push(word);
+            });
+        };
+
+        letter.querySelectorAll('p').forEach((paragraph) => {
+            paragraph.setAttribute('aria-label', paragraph.textContent.trim());
+            const nodes = [...paragraph.childNodes];
+            paragraph.textContent = '';
+            nodes.forEach((node) => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    splitWords(paragraph, node.textContent);
+                } else {
+                    const key = node.cloneNode(false);
+                    splitWords(key, node.textContent);
+                    paragraph.append(key);
+                }
             });
         });
 
