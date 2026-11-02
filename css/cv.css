@@ -1,0 +1,280 @@
+/* DBellido · Currículum */
+
+/* ---------- Portada ---------- */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    padding-block: clamp(56px, 10vw, 120px) clamp(48px, 7vw, 88px);
+}
+
+/* La trama de píxeles solo vive en la portada y se apaga hacia abajo */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(var(--line) 1px, transparent 1px);
+    background-size: 24px 24px;
+    -webkit-mask-image: linear-gradient(#000 55%, transparent);
+    mask-image: linear-gradient(#000 55%, transparent);
+}
+
+.hero-rotator {
+    min-height: 32px;
+    margin-top: 28px;
+}
+
+.hero-art {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: clamp(24px, 4vw, 48px);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.pixel-mark {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1;
+}
+
+.pixel-mark path {
+    opacity: 0;
+    animation: pixel-in 0.4s ease-out forwards;
+    animation-delay: calc(var(--i) * 160ms + 100ms);
+}
+
+@keyframes pixel-in {
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-art-caption {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--muted);
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: clamp(48px, 7vw, 80px);
+    margin-bottom: 0;
+}
+
+.hero-stats > div {
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+}
+
+.hero-stats dt {
+    font-size: var(--fs-xs);
+    color: var(--muted);
+}
+
+.hero-stats dd {
+    margin: 6px 0 0;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: clamp(20px, 2.4vw, 28px);
+    letter-spacing: -0.02em;
+}
+
+/* ---------- Texto ---------- */
+
+.prose {
+    max-width: 680px;
+}
+
+.prose p {
+    margin: 0 0 20px;
+    color: var(--muted);
+}
+
+.prose strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.prose .lead {
+    font-size: var(--fs-lg);
+    line-height: 1.45;
+    color: var(--text);
+}
+
+/* ---------- Experiencia ---------- */
+
+.jobs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.job {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.job:first-child {
+    padding-top: 0;
+}
+
+.job-when {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--muted);
+}
+
+.job-when span {
+    display: block;
+    color: var(--text);
+}
+
+.job h3 {
+    margin: 0;
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.job .at {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.job-where {
+    margin: 4px 0 12px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--muted);
+}
+
+.job-main > p {
+    margin: 0 0 14px;
+    color: var(--muted);
+}
+
+.job-points {
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+    color: var(--muted);
+}
+
+.job-points li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 6px;
+}
+
+.job-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 6px;
+    height: 6px;
+    background: var(--muted);
+}
+
+/* ---------- Habilidades ---------- */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.skill {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+}
+
+.skill:hover {
+    border-color: var(--line-strong);
+}
+
+.skill h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 10px;
+    font-size: var(--fs-body);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.px-bullet {
+    flex: none;
+    width: 12px;
+    height: 12px;
+    background: var(--muted);
+    box-shadow: 12px 0 0 var(--text);
+    margin-right: 12px;
+}
+
+.skill p {
+    margin: 0;
+    font-size: var(--fs-s);
+    color: var(--muted);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (min-width: 901px) {
+    .hero-inner {
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-art {
+        max-width: 320px;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 24px;
+    }
+}
+
+@media (max-width: 720px) {
+    .hero-art {
+        max-width: 220px;
+        padding: 20px;
+    }
+
+    .job {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    .job-when span {
+        display: inline;
+        margin-left: 8px;
+    }
+
+    .skills {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pixel-mark path {
+        opacity: 1;
+        animation: none;
+    }
+}

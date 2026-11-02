@@ -1,3 +1,4 @@
-theme: jekyll-theme-minimal
-title: Bellit CV
-description: Desarrollador Full‑Stack especializado en webs profesionales, sistemas multilingües y arquitectura de contenidos. Aquí encontrarás mis proyectos, mi experiencia y la forma en que trabajo. Disponible para colaboraciones y nuevos retos.
+# La web es HTML estático: Jekyll solo copia los archivos.
+exclude:
+  - README.md
+  - PRODUCT.md
