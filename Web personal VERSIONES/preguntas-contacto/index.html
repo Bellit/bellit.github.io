@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuestas de preguntas y contacto · DBellido</title>
+    <meta name="description" content="Comparación de propuestas para Preguntas frecuentes y Contacto de DBellido.">
+    <meta name="author" content="DBellido">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#111116">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../escaparate.css">
+    <link rel="stylesheet" href="../../toques.css">
+    <link rel="stylesheet" href="../servicios/servicios.css">
+    <link rel="stylesheet" href="preguntas-contacto-base.css">
+    <link rel="stylesheet" href="preguntas-contacto.css">
+</head>
+
+<body>
+    <header class="site-header is-scrolled">
+        <div class="container header-inner">
+            <a href="../../" class="brand" aria-label="DBellido, ir a la web principal">
+                <svg class="brand-mark" viewBox="-1 -3 13 13" shape-rendering="crispEdges" aria-hidden="true">
+                    <path class="px-d" d="M0 0h4v1h-4z M0 1h1v5h-1z M4 1h1v5h-1z M0 6h4v1h-4z" />
+                    <path class="px-b" d="M6 0h4v1h-4z M6 1h1v5h-1z M10 1h1v2h-1z M7 3h3v1h-3z M10 4h1v2h-1z M7 6h3v1h-3z" />
+                </svg>
+                <span class="brand-name">DBellido</span>
+            </a>
+            <a class="back-link" href="../">Todas las versiones</a>
+        </div>
+    </header>
+
+    <div class="picker" id="picker" hidden>
+        <div class="container picker-inner">
+            <div class="picker-group" role="group" aria-label="Propuesta de preguntas frecuentes">
+                <span class="picker-label">Preguntas</span>
+                <button type="button" class="picker-btn" data-group="faq" data-choice="actual">Actual</button>
+                <button type="button" class="picker-btn" data-group="faq" data-choice="a">A · Acordeón</button>
+                <button type="button" class="picker-btn" data-group="faq" data-choice="b">B · Conversación</button>
+            </div>
+            <div class="picker-group" role="group" aria-label="Propuesta de contacto">
+                <span class="picker-label">Contacto</span>
+                <button type="button" class="picker-btn" data-group="contacto" data-choice="actual">Actual</button>
+                <button type="button" class="picker-btn" data-group="contacto" data-choice="a">A · Una frase</button>
+                <button type="button" class="picker-btn" data-group="contacto" data-choice="b">B · Cierre</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Preguntas: actual -->
+        <section class="section" data-group="faq" data-choice="actual">
+            <div class="container section-grid">
+                <header class="section-head">
+                    <span class="section-num">[06]</span>
+                    <h2>Preguntas frecuentes</h2>
+                </header>
+                <div class="faq">
+                    <details>
+                        <summary>¿Cuánto cuesta?</summary>
+                        <p>Depende de lo que necesites, por eso no publico tarifas. Después de una primera charla te
+                            envío un presupuesto cerrado y sin compromiso.</p>
+                    </details>
+                    <details>
+                        <summary>¿Podré cambiar los textos y las fotos yo mismo?</summary>
+                        <p>Sí. Te dejo la web preparada para que lo gestiones sin tocar código y te enseño a hacerlo.</p>
+                    </details>
+                    <details>
+                        <summary>¿Cuánto se tarda?</summary>
+                        <p>Cada proyecto es distinto. El plazo va por escrito en la propuesta, junto con las entregas
+                            intermedias.</p>
+                    </details>
+                    <details>
+                        <summary>¿Y cuando la web ya esté publicada?</summary>
+                        <p>Puedo encargarme del mantenimiento: actualizaciones, copias de seguridad, seguridad y
+                            pequeños cambios. Si prefieres llevarlo tú, también te lo dejo todo documentado.</p>
+                    </details>
+                    <details>
+                        <summary>¿Trabajas con agencias?</summary>
+                        <p>Sí. Puedo integrarme en vuestro equipo para proyectos concretos y trabajar con vuestra marca.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preguntas A: acordeón con una respuesta abierta cada vez -->
+        <section class="section" data-group="faq" data-choice="a">
+            <div class="container section-grid">
+                <header class="section-head">
+                    <span class="section-num">[06]</span>
+                    <h2>Preguntas frecuentes</h2>
+                    <p class="fold-side">¿No ves tu duda?<br><a href="#contacto-a">Pregúntame directamente →</a></p>
+                </header>
+                <div class="fold" id="fold">
+                    <div class="fold-item">
+                        <h3><button type="button" class="fold-btn" aria-expanded="true" aria-controls="fold-0">¿Cuánto cuesta?<span class="fold-icon" aria-hidden="true"></span></button></h3>
+                        <div class="fold-panel" id="fold-0"><div><p>Depende de lo que necesites, por eso no publico tarifas. Después de una primera charla te envío un presupuesto cerrado y sin compromiso.</p></div></div>
+                    </div>
+                    <div class="fold-item">
+                        <h3><button type="button" class="fold-btn" aria-expanded="true" aria-controls="fold-1">¿Podré cambiar los textos y las fotos yo mismo?<span class="fold-icon" aria-hidden="true"></span></button></h3>
+                        <div class="fold-panel" id="fold-1"><div><p>Sí. Te dejo la web preparada para que lo gestiones sin tocar código y te enseño a hacerlo.</p></div></div>
+                    </div>
+                    <div class="fold-item">
+                        <h3><button type="button" class="fold-btn" aria-expanded="true" aria-controls="fold-2">¿Cuánto se tarda?<span class="fold-icon" aria-hidden="true"></span></button></h3>
+                        <div class="fold-panel" id="fold-2"><div><p>Cada proyecto es distinto. El plazo va por escrito en la propuesta, junto con las entregas intermedias.</p></div></div>
+                    </div>
+                    <div class="fold-item">
+                        <h3><button type="button" class="fold-btn" aria-expanded="true" aria-controls="fold-3">¿Y cuando la web ya esté publicada?<span class="fold-icon" aria-hidden="true"></span></button></h3>
+                        <div class="fold-panel" id="fold-3"><div><p>Puedo encargarme del mantenimiento: actualizaciones, copias de seguridad, seguridad y pequeños cambios. Si prefieres llevarlo tú, también te lo dejo todo documentado.</p></div></div>
+                    </div>
+                    <div class="fold-item">
+                        <h3><button type="button" class="fold-btn" aria-expanded="true" aria-controls="fold-4">¿Trabajas con agencias?<span class="fold-icon" aria-hidden="true"></span></button></h3>
+                        <div class="fold-panel" id="fold-4"><div><p>Sí. Puedo integrarme en vuestro equipo para proyectos concretos y trabajar con vuestra marca.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preguntas B: una conversación contigo -->
+        <section class="section" data-group="faq" data-choice="b">
+            <div class="container section-grid">
+                <header class="section-head">
+                    <span class="section-num">[06]</span>
+                    <h2>Preguntas frecuentes</h2>
+                </header>
+                <div>
+                    <ol class="chat" id="chat">
+                        <li class="chat-pair">
+                            <p class="chat-q">¿Cuánto cuesta?</p>
+                            <div class="chat-a"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><p class="chat-a-text" style="margin:0">Depende de lo que necesites, por eso no publico tarifas. Después de una primera charla te envío un presupuesto cerrado y sin compromiso.</p></div>
+                        </li>
+                        <li class="chat-pair">
+                            <p class="chat-q">¿Podré cambiar los textos y las fotos yo mismo?</p>
+                            <div class="chat-a"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><p class="chat-a-text" style="margin:0">Sí. Te dejo la web preparada para que lo gestiones sin tocar código y te enseño a hacerlo.</p></div>
+                        </li>
+                        <li class="chat-pair">
+                            <p class="chat-q">¿Cuánto se tarda?</p>
+                            <div class="chat-a"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><p class="chat-a-text" style="margin:0">Cada proyecto es distinto. El plazo va por escrito en la propuesta, junto con las entregas intermedias.</p></div>
+                        </li>
+                        <li class="chat-pair">
+                            <p class="chat-q">¿Y cuando la web ya esté publicada?</p>
+                            <div class="chat-a"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><p class="chat-a-text" style="margin:0">Puedo encargarme del mantenimiento: actualizaciones, copias de seguridad, seguridad y pequeños cambios. Si prefieres llevarlo tú, también te lo dejo todo documentado.</p></div>
+                        </li>
+                        <li class="chat-pair">
+                            <p class="chat-q">¿Trabajas con agencias?</p>
+                            <div class="chat-a"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><p class="chat-a-text" style="margin:0">Sí. Puedo integrarme en vuestro equipo para proyectos concretos y trabajar con vuestra marca.</p></div>
+                        </li>
+                    </ol>
+                    <p class="chat-more">¿Tienes otra pregunta? <a href="#contacto-a">Escríbeme →</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto: actual -->
+        <section class="section section-contact" data-group="contacto" data-choice="actual">
+            <div class="container section-grid">
+                <div class="section-head contact-side">
+                    <span class="section-num">[07]</span>
+                    <h2>Contacto</h2>
+                    <div class="contact-intro">
+                        <p class="contact-title">Cuéntame tu proyecto</p>
+                        <p>Aunque sea solo una idea. Te respondo en persona y, si encaja, te preparo una propuesta.</p>
+                        <a class="contact-link" href="https://www.linkedin.com/in/dbellidodev/" target="_blank"
+                            rel="noopener">
+                            <span class="contact-link-label">LinkedIn</span>
+                            <span>/in/dbellidodev ↗</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xkoanreb" method="POST">
+                        <div class="field">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="_replyto" required autocomplete="email">
+                        </div>
+                        <div class="field">
+                            <label for="project-type">¿Qué necesitas?</label>
+                            <select id="project-type" name="tipo_proyecto">
+                                <option>Una web nueva</option>
+                                <option>Una tienda online</option>
+                                <option>Automatizar tareas con IA</option>
+                                <option>Una herramienta a medida</option>
+                                <option>Arreglar o mantener una web</option>
+                                <option>Colaborar con mi agencia</option>
+                                <option>Otra cosa</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="message">Cuéntame un poco más</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                        <p class="form-status" id="form-status" role="status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto A: una frase que se rellena -->
+        <section class="section" id="contacto-a" data-group="contacto" data-choice="a">
+            <div class="container">
+                <header class="section-head section-head-row">
+                    <span class="section-num">[07]</span>
+                    <h2>Cuéntame tu proyecto</h2>
+                </header>
+                <form class="sentence" action="https://formspree.io/f/xkoanreb" method="POST">
+                    <p class="sentence-text">
+                        Hola, Daniel. Me llamo
+                        <label class="sr-only" for="a-name">Nombre</label>
+                        <input class="sentence-name" type="text" id="a-name" name="name" placeholder="tu nombre" required autocomplete="name">
+                        y necesito
+                        <label class="sr-only" for="a-type">Qué necesitas</label>
+                        <select id="a-type" name="tipo_proyecto">
+                            <option>Una web nueva</option>
+                            <option>Una tienda online</option>
+                            <option>Automatizar tareas con IA</option>
+                            <option>Una herramienta a medida</option>
+                            <option>Arreglar o mantener una web</option>
+                            <option>Colaborar con mi agencia</option>
+                            <option>Otra cosa</option>
+                        </select><span class="sentence-dot">.</span>
+                        Puedes escribirme a
+                        <label class="sr-only" for="a-email">Email</label>
+                        <input class="sentence-email" type="email" id="a-email" name="_replyto" placeholder="tu email" required autocomplete="email"><span class="sentence-dot">.</span>
+                    </p>
+                    <label class="sentence-more">
+                        <span class="sr-only">Cuéntame un poco más</span>
+                        <textarea name="message" rows="4" placeholder="Te cuento un poco más…" required></textarea>
+                    </label>
+                    <div class="sentence-foot">
+                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                        <p class="sentence-note"><i class="px" aria-hidden="true"></i>Te respondo en persona.</p>
+                        <a href="https://www.linkedin.com/in/dbellidodev/" target="_blank" rel="noopener">También en LinkedIn ↗</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contacto B: cierre en ámbar con lo que pasa después -->
+        <section class="section closing" data-group="contacto" data-choice="b">
+            <div class="container closing-grid">
+                <div>
+                    <span class="section-num">[07]</span>
+                    <h2>Cuéntame tu proyecto</h2>
+                    <p class="closing-lead">Aunque sea solo una idea.</p>
+                    <ul class="closing-steps">
+                        <li><i aria-hidden="true"></i>Me escribes lo que tienes en mente.</li>
+                        <li><i aria-hidden="true"></i>Te respondo en persona.</li>
+                        <li><i aria-hidden="true"></i>Si encaja, te preparo una propuesta.</li>
+                    </ul>
+                    <a class="closing-link" href="https://www.linkedin.com/in/dbellidodev/" target="_blank" rel="noopener">También en LinkedIn ↗</a>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xkoanreb" method="POST">
+                    <div class="field">
+                        <label for="b-name">Nombre</label>
+                        <input type="text" id="b-name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="field">
+                        <label for="b-email">Email</label>
+                        <input type="email" id="b-email" name="_replyto" required autocomplete="email">
+                    </div>
+                    <div class="field">
+                        <label for="b-type">¿Qué necesitas?</label>
+                        <select id="b-type" name="tipo_proyecto">
+                            <option>Una web nueva</option>
+                            <option>Una tienda online</option>
+                            <option>Automatizar tareas con IA</option>
+                            <option>Una herramienta a medida</option>
+                            <option>Arreglar o mantener una web</option>
+                            <option>Colaborar con mi agencia</option>
+                            <option>Otra cosa</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="b-message">Cuéntame un poco más</label>
+                        <textarea id="b-message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Daniel Bellido</p>
+            <p class="signature">
+                <svg viewBox="-1 -3 13 13" shape-rendering="crispEdges" aria-hidden="true">
+                    <path class="px-d" d="M0 0h4v1h-4z M0 1h1v5h-1z M4 1h1v5h-1z M0 6h4v1h-4z" />
+                    <path class="px-b" d="M6 0h4v1h-4z M6 1h1v5h-1z M10 1h1v2h-1z M7 3h3v1h-3z M10 4h1v2h-1z M7 6h3v1h-3z" />
+                </svg>
+                <span>Crafted by <b class="signature-name">DBellido</b></span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="preguntas-contacto.js"></script>
+</body>
+
+</html>

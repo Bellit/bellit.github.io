@@ -175,41 +175,6 @@
     color: var(--warm);
 }
 
-/* ---------- Contacto: la invitación en la voz de Daniel ---------- */
-
-.contact-side .contact-intro {
-    padding: 24px;
-    background: var(--warm);
-    border-radius: var(--radius);
-}
-
-.contact-side .contact-title {
-    color: var(--warm-ink);
-}
-
-.contact-side .contact-intro > p:not(.contact-title) {
-    color: var(--warm-ink);
-}
-
-.contact-side .contact-link {
-    color: var(--text);
-    background: var(--warm-ink);
-    border-color: var(--warm-ink);
-}
-
-.contact-side .contact-link:hover {
-    border-color: var(--warm-ink);
-    background: #26262E;
-}
-
-.contact-side .contact-link-label {
-    color: var(--muted);
-}
-
-.contact-side .contact-link:focus-visible {
-    outline-color: var(--warm-ink);
-}
-
 /* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {

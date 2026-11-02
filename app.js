@@ -415,6 +415,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 3f. Preguntas: cada pregunta aparece, se escribe la respuesta y se muestra
+    const chat = document.getElementById('chat');
+
+    if (chat && !reduceMotion && 'IntersectionObserver' in window) {
+        chat.classList.add('is-live');
+        const chatObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const pair = entry.target;
+                chatObserver.unobserve(pair);
+                pair.classList.add('is-asked');
+                setTimeout(() => pair.classList.add('is-typing'), 350);
+                setTimeout(() => pair.classList.add('is-answered'), 1150);
+            });
+        }, { threshold: 0.6 });
+        chat.querySelectorAll('.chat-pair').forEach((pair) => chatObserver.observe(pair));
+    }
+
     // 4. Borde de la cabecera al hacer scroll
     const header = document.getElementById('site-header');
     const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);

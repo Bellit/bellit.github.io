@@ -10,6 +10,7 @@
     --muted: #A6A6B3;
     --accent: #B4A5FF; /* reservado a acciones, enlaces y el dato clave */
     --accent-ink: #111116;
+    --warm: #F5B544; /* la voz de Daniel */
 
     --fs-xs: 13px;
     --fs-s: 15px;
@@ -728,9 +729,21 @@ a {
 }
 
 .signature svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--muted);
+    width: 24px;
+    height: 24px;
+}
+
+.signature .px-d {
+    fill: var(--text);
+}
+
+.signature .px-b {
+    fill: var(--accent);
+}
+
+.signature-name {
+    font-weight: 700;
+    color: var(--warm);
 }
 
 /* ---------- Responsive ---------- */

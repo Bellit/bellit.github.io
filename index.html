@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="ia.css">
     <link rel="stylesheet" href="proceso.css">
     <link rel="stylesheet" href="quien.css">
+    <link rel="stylesheet" href="preguntas-contacto.css">
 </head>
 
 <body>
@@ -497,81 +498,76 @@
                     <span class="section-num">[06]</span>
                     <h2>Preguntas frecuentes</h2>
                 </header>
-                <div class="faq">
-                    <details>
-                        <summary>¿Cuánto cuesta?</summary>
-                        <p>Depende de lo que necesites, por eso no publico tarifas. Después de una primera charla te
-                            envío un presupuesto cerrado y sin compromiso.</p>
-                    </details>
-                    <details>
-                        <summary>¿Podré cambiar los textos y las fotos yo mismo?</summary>
-                        <p>Sí. Te dejo la web preparada para que lo gestiones sin tocar código y te enseño a hacerlo.</p>
-                    </details>
-                    <details>
-                        <summary>¿Cuánto se tarda?</summary>
-                        <p>Cada proyecto es distinto. El plazo va por escrito en la propuesta, junto con las entregas
-                            intermedias.</p>
-                    </details>
-                    <details>
-                        <summary>¿Y cuando la web ya esté publicada?</summary>
-                        <p>Puedo encargarme del mantenimiento: actualizaciones, copias de seguridad, seguridad y
-                            pequeños cambios. Si prefieres llevarlo tú, también te lo dejo todo documentado.</p>
-                    </details>
-                    <details>
-                        <summary>¿Trabajas con agencias?</summary>
-                        <p>Sí. Puedo integrarme en vuestro equipo para proyectos concretos y trabajar con vuestra marca.
-                        </p>
-                    </details>
+                <div>
+                    <ol class="chat" id="chat">
+                        <li class="chat-pair">
+                            <p class="chat-q">¿Cuánto cuesta?</p>
+                            <div class="chat-a"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><p class="chat-a-text">Depende de lo que necesites, por eso no publico tarifas. Después de una primera charla te envío un presupuesto cerrado y sin compromiso.</p></div>
+                        </li>
+                        <li class="chat-pair">
+                            <p class="chat-q">¿Podré cambiar los textos y las fotos yo mismo?</p>
+                            <div class="chat-a"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><p class="chat-a-text">Sí. Te dejo la web preparada para que lo gestiones sin tocar código y te enseño a hacerlo.</p></div>
+                        </li>
+                        <li class="chat-pair">
+                            <p class="chat-q">¿Cuánto se tarda?</p>
+                            <div class="chat-a"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><p class="chat-a-text">Cada proyecto es distinto. El plazo va por escrito en la propuesta, junto con las entregas intermedias.</p></div>
+                        </li>
+                        <li class="chat-pair">
+                            <p class="chat-q">¿Y cuando la web ya esté publicada?</p>
+                            <div class="chat-a"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><p class="chat-a-text">Puedo encargarme del mantenimiento: actualizaciones, copias de seguridad, seguridad y pequeños cambios. Si prefieres llevarlo tú, también te lo dejo todo documentado.</p></div>
+                        </li>
+                        <li class="chat-pair">
+                            <p class="chat-q">¿Trabajas con agencias?</p>
+                            <div class="chat-a"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><p class="chat-a-text">Sí. Puedo integrarme en vuestro equipo para proyectos concretos y trabajar con vuestra marca.</p></div>
+                        </li>
+                    </ol>
+                    <p class="chat-more">¿Tienes otra pregunta? <a href="#contacto">Escríbeme →</a></p>
                 </div>
             </div>
         </section>
 
         <!-- Contacto -->
-        <section class="section section-contact" id="contacto">
-            <div class="container section-grid">
-                <div class="section-head contact-side">
+        <section class="section closing" id="contacto">
+            <div class="container closing-grid">
+                <div>
                     <span class="section-num">[07]</span>
-                    <h2>Contacto</h2>
-                    <div class="contact-intro">
-                        <p class="contact-title">Cuéntame tu proyecto</p>
-                        <p>Aunque sea solo una idea. Te respondo en persona y, si encaja, te preparo una propuesta.</p>
-                        <a class="contact-link" href="https://www.linkedin.com/in/dbellidodev/" target="_blank"
-                            rel="noopener">
-                            <span class="contact-link-label">LinkedIn</span>
-                            <span>/in/dbellidodev ↗</span>
-                        </a>
+                    <h2>Cuéntame tu proyecto</h2>
+                    <p class="closing-lead">Aunque sea solo una idea.</p>
+                    <ul class="closing-steps">
+                        <li><i aria-hidden="true"></i>Me escribes lo que tienes en mente.</li>
+                        <li><i aria-hidden="true"></i>Te respondo en persona.</li>
+                        <li><i aria-hidden="true"></i>Si encaja, te preparo una propuesta.</li>
+                    </ul>
+                    <a class="closing-link" href="https://www.linkedin.com/in/dbellidodev/" target="_blank" rel="noopener">También en LinkedIn ↗</a>
+                </div>
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/xkoanreb" method="POST">
+                    <div class="field">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required autocomplete="name">
                     </div>
-                </div>
-                <div class="contact">
-                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xkoanreb" method="POST">
-                        <div class="field">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" required autocomplete="name">
-                        </div>
-                        <div class="field">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="_replyto" required autocomplete="email">
-                        </div>
-                        <div class="field">
-                            <label for="project-type">¿Qué necesitas?</label>
-                            <select id="project-type" name="tipo_proyecto">
-                                <option>Una web nueva</option>
-                                <option>Una tienda online</option>
-                                <option>Automatizar tareas con IA</option>
-                                <option>Una herramienta a medida</option>
-                                <option>Arreglar o mantener una web</option>
-                                <option>Colaborar con mi agencia</option>
-                                <option>Otra cosa</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label for="message">Cuéntame un poco más</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                        <p class="form-status" id="form-status" role="status"></p>
-                    </form>
-                </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="_replyto" required autocomplete="email">
+                    </div>
+                    <div class="field">
+                        <label for="project-type">¿Qué necesitas?</label>
+                        <select id="project-type" name="tipo_proyecto">
+                            <option>Una web nueva</option>
+                            <option>Una tienda online</option>
+                            <option>Automatizar tareas con IA</option>
+                            <option>Una herramienta a medida</option>
+                            <option>Arreglar o mantener una web</option>
+                            <option>Colaborar con mi agencia</option>
+                            <option>Otra cosa</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="message">Cuéntame un poco más</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                    <p class="form-status" id="form-status" role="status"></p>
+                </form>
             </div>
         </section>
     </main>
@@ -581,9 +577,10 @@
             <p>© 2026 Daniel Bellido</p>
             <p class="signature">
                 <svg viewBox="-1 -3 13 13" shape-rendering="crispEdges" aria-hidden="true">
-                    <path d="M0 0h4v1h-4z M0 1h1v5h-1z M4 1h1v5h-1z M0 6h4v1h-4z M6 0h4v1h-4z M6 1h1v5h-1z M10 1h1v2h-1z M7 3h3v1h-3z M10 4h1v2h-1z M7 6h3v1h-3z" />
+                    <path class="px-d" d="M0 0h4v1h-4z M0 1h1v5h-1z M4 1h1v5h-1z M0 6h4v1h-4z" />
+                    <path class="px-b" d="M6 0h4v1h-4z M6 1h1v5h-1z M10 1h1v2h-1z M7 3h3v1h-3z M10 4h1v2h-1z M7 6h3v1h-3z" />
                 </svg>
-                Crafted by DBellido
+                <span>Crafted by <b class="signature-name">DBellido</b></span>
             </p>
         </div>
     </footer>

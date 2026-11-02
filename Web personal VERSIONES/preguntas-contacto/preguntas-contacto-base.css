@@ -1,0 +1,111 @@
+/* Estilos de las secciones anteriores, para las pestañas Actual de esta comparación */
+
+/* ---------- Preguntas frecuentes ---------- */
+
+.faq {
+    border-top: 1px solid var(--line);
+}
+
+.faq details {
+    border-bottom: 1px solid var(--line);
+}
+
+.faq summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    min-height: 64px;
+    padding: 12px 0;
+    font-weight: 600;
+    font-size: var(--fs-body);
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: '+';
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: var(--fs-lg);
+    color: var(--muted);
+}
+
+.faq details[open] summary::after {
+    content: '−';
+}
+
+.faq details p {
+    max-width: 58ch;
+    margin: 0 0 20px;
+    color: var(--muted);
+}
+
+/* ---------- Contacto: texto bajo el título, formulario a la derecha ---------- */
+
+.section-contact .section-grid {
+    grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+}
+
+.contact-side .contact-intro {
+    margin-top: 28px;
+}
+
+.contact-side .contact-title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+}
+
+.contact-side .contact-intro > p:not(.contact-title) {
+    margin-bottom: 24px;
+}
+
+.section-contact .contact {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+/* ---------- Contacto: la invitación en la voz de Daniel ---------- */
+
+.contact-side .contact-intro {
+    padding: 24px;
+    background: var(--warm);
+    border-radius: var(--radius);
+}
+
+.contact-side .contact-title {
+    color: var(--warm-ink);
+}
+
+.contact-side .contact-intro > p:not(.contact-title) {
+    color: var(--warm-ink);
+}
+
+.contact-side .contact-link {
+    color: var(--text);
+    background: var(--warm-ink);
+    border-color: var(--warm-ink);
+}
+
+.contact-side .contact-link:hover {
+    border-color: var(--warm-ink);
+    background: #26262E;
+}
+
+.contact-side .contact-link-label {
+    color: var(--muted);
+}
+
+.contact-side .contact-link:focus-visible {
+    outline-color: var(--warm-ink);
+}
+
+@media (max-width: 900px) {
+    .section-contact .section-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
