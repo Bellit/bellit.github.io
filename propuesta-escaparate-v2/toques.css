@@ -1,0 +1,225 @@
+/* DBellido · Toques sobre el escaparate: el ámbar es la voz de Daniel; el lavanda, las acciones */
+
+:root {
+    --warm: #F5B544;
+    --warm-ink: #111116;
+}
+
+/* Píxel suelto: la unidad de la marca, usada con mesura */
+.px {
+    display: inline-block;
+    flex: none;
+    width: 8px;
+    height: 8px;
+    background: var(--warm);
+}
+
+/* ---------- Portada ---------- */
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 0;
+    font-size: var(--fs-s);
+    color: var(--text);
+}
+
+/* ---------- Servicios: la especialidad, a todo el ancho ---------- */
+
+.services {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.service-featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 16px clamp(32px, 5vw, 64px);
+    align-items: start;
+    background: var(--surface-2);
+}
+
+.service-flag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--warm);
+}
+
+.service-featured h3 {
+    font-size: var(--fs-xl);
+    line-height: 1.15;
+}
+
+.service-featured p {
+    margin: 0 0 20px;
+    color: var(--text);
+}
+
+.service-featured .tags li {
+    background: var(--bg);
+}
+
+/* ---------- Trabajos ---------- */
+
+.work-type-warm {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--warm);
+}
+
+/* ---------- IA ---------- */
+
+.ai-proof {
+    display: block;
+    margin-top: 24px;
+    padding-top: 20px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+}
+
+.ai-proof strong {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    font-weight: 400;
+    color: var(--warm);
+}
+
+.ai-proof a {
+    font-weight: 600;
+    color: var(--accent);
+    text-underline-offset: 3px;
+}
+
+/* El resultado de la calculadora ocupa su bloque con el color de marca */
+.calc-result {
+    background: var(--accent);
+    border-color: transparent;
+}
+
+.calc-number,
+.calc-label {
+    color: var(--accent-ink);
+}
+
+.calc-label {
+    font-weight: 500;
+}
+
+.calc-note {
+    color: var(--accent-ink);
+}
+
+/* ---------- Proceso: el proyecto se completa píxel a píxel ---------- */
+
+.step-px {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.step-px i {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: var(--surface-2);
+    transition: background-color 0.3s ease-out;
+    transition-delay: calc(var(--step, 0) * 180ms);
+}
+
+.step:nth-child(1) { --step: 0; }
+.step:nth-child(2) { --step: 1; }
+.step:nth-child(3) { --step: 2; }
+.step:nth-child(4) { --step: 3; }
+
+.step-px i.on {
+    background: var(--accent);
+}
+
+.step:last-child .step-px i.on {
+    background: var(--warm);
+}
+
+.steps.is-waiting .step-px i.on {
+    background: var(--surface-2);
+}
+
+/* ---------- Quién hay detrás ---------- */
+
+#sobre-mi .prose .lead {
+    font-size: var(--fs-xl);
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.about-sign {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+}
+
+.prose p.about-sign {
+    margin-bottom: 24px;
+    color: var(--warm);
+}
+
+/* ---------- Contacto: la invitación en la voz de Daniel ---------- */
+
+.contact-side .contact-intro {
+    padding: 24px;
+    background: var(--warm);
+    border-radius: var(--radius);
+}
+
+.contact-side .contact-title {
+    color: var(--warm-ink);
+}
+
+.contact-side .contact-intro > p:not(.contact-title) {
+    color: var(--warm-ink);
+}
+
+.contact-side .contact-link {
+    color: var(--text);
+    background: var(--warm-ink);
+    border-color: var(--warm-ink);
+}
+
+.contact-side .contact-link:hover {
+    border-color: var(--warm-ink);
+    background: #26262E;
+}
+
+.contact-side .contact-link-label {
+    color: var(--muted);
+}
+
+.contact-side .contact-link:focus-visible {
+    outline-color: var(--warm-ink);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+    .services,
+    .service-featured {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .step-px i {
+        transition: none;
+    }
+}
