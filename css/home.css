@@ -163,7 +163,7 @@
     margin-bottom: clamp(32px, 5vw, 56px);
 }
 
-/* ---------- Servicios: se entra por lo que el cliente quiere resolver ---------- */
+/* ---------- Qué hago: se entra por cada área de trabajo ---------- */
 
 .needs {
     position: relative;
@@ -267,7 +267,7 @@
     background: var(--muted);
 }
 
-/* Prueba y acción, siempre en la base del panel */
+/* Prueba, siempre en la base del panel */
 .need-foot {
     display: flex;
     flex-wrap: wrap;
@@ -289,23 +289,10 @@
     color: var(--muted);
 }
 
-.need-proof a,
-.need-cta {
+.need-proof a {
     font-weight: 600;
     color: var(--accent);
     text-underline-offset: 3px;
-}
-
-.need-cta {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    font-size: var(--fs-s);
-    text-decoration: none;
-}
-
-.need-cta:hover {
-    text-decoration: underline;
 }
 
 .needs-note {
@@ -832,21 +819,6 @@
 .ai-ideas-copy p {
     margin: 0;
     color: var(--muted);
-}
-
-.ai-ideas-cta {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    margin-top: 8px;
-    font-size: var(--fs-s);
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
-}
-
-.ai-ideas-cta:hover {
-    text-decoration: underline;
 }
 
 .ai-ideas ul {

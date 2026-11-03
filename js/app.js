@@ -165,9 +165,9 @@ function initRotator(onChange) {
     const words = [
         'Webs en WordPress',
         'Tiendas con WooCommerce',
-        'Automatizaciones con IA',
+        'Desarrollo con IA',
         'Herramientas a medida',
-        'Rescate de webs heredadas'
+        'Refactorización de código'
     ];
     let wordIndex = 0;
     let charIndex = words[0].length;
@@ -214,7 +214,7 @@ function initRotator(onChange) {
     if (!reduceMotion) timer = setTimeout(type, 2600);
 }
 
-// ---------- Servicios: una necesidad abierta cada vez ----------
+// ---------- Qué hago: un panel abierto cada vez ----------
 
 function initNeeds() {
     const needs = document.getElementById('needs');
@@ -341,7 +341,7 @@ function initTimeBar() {
     else onceVisible(bar, 0.5, () => setTimeout(() => setMode(true), 500));
 }
 
-// ---------- Cómo trabajo: el scroll va tachando cada duda ----------
+// ---------- Cómo trabajo: el scroll va tachando lo que evito ----------
 
 function initWorries() {
     const worries = document.getElementById('worries');
@@ -376,7 +376,7 @@ function initWorries() {
     update();
 }
 
-// ---------- Quién hay detrás: el texto se enciende palabra a palabra ----------
+// ---------- Quién soy: el texto se enciende palabra a palabra ----------
 
 function initLetter() {
     const letter = document.getElementById('letter');
@@ -447,18 +447,6 @@ function initChat() {
 
 // ---------- Contacto ----------
 
-// Los enlaces con data-project dejan elegido el tipo de proyecto en el formulario
-function initProjectLinks() {
-    const projectType = document.getElementById('project-type');
-    if (!projectType) return;
-
-    document.querySelectorAll('[data-project]').forEach((link) => {
-        link.addEventListener('click', () => {
-            projectType.value = link.dataset.project;
-        });
-    });
-}
-
 // Envío a Formspree sin salir de la página
 function initContactForm() {
     const form = document.getElementById('contact-form');
@@ -507,6 +495,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initWorries();
     initLetter();
     initChat();
-    initProjectLinks();
     initContactForm();
 });
