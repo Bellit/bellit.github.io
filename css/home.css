@@ -523,7 +523,7 @@
     /* El enlace del menú deja la sección justo bajo la cabecera, ya fijada */
     scroll-margin-top: -15px;
     /* Una pantalla de sección y 90 % de pantalla de recorrido entre proyectos */
-    height: calc(100svh - var(--pin-top) + 3 * 90svh);
+    height: calc(100svh - var(--pin-top) + 2 * 90svh);
 }
 
 .pin.is-pinned .pin-sticky {
