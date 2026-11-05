@@ -338,7 +338,7 @@
     .needs.is-ready {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         column-gap: clamp(32px, 6vw, 80px);
     }
 

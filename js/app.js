@@ -163,11 +163,11 @@ function initRotator(onChange) {
     if (!rotator) return;
 
     const words = [
-        'Webs en WordPress',
-        'Tiendas con WooCommerce',
-        'Desarrollo con IA',
-        'Herramientas a medida',
-        'Refactorización de código'
+        'Webs',
+        'Tiendas online',
+        'Proyectos con IA',
+        'Apps y herramientas',
+        'Código heredado'
     ];
     let wordIndex = 0;
     let charIndex = words[0].length;
