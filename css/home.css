@@ -392,9 +392,17 @@
     background: var(--bg);
 }
 
-.work-shot img {
+.work-shot img,
+.work-video {
+    display: block;
     width: 100%;
     height: auto;
+}
+
+.work-note {
+    margin: 0;
+    font-size: var(--fs-s);
+    color: var(--muted);
 }
 
 .work-type {
@@ -523,7 +531,7 @@
     /* El enlace del menú deja la sección justo bajo la cabecera, ya fijada */
     scroll-margin-top: -15px;
     /* Una pantalla de sección y 90 % de pantalla de recorrido entre proyectos */
-    height: calc(100svh - var(--pin-top) + 1 * 90svh);
+    height: calc(100svh - var(--pin-top) + 2 * 90svh);
 }
 
 .pin.is-pinned .pin-sticky {
@@ -580,7 +588,8 @@
     pointer-events: auto;
 }
 
-.pin.is-pinned .work-shot img {
+.pin.is-pinned .work-shot img,
+.pin.is-pinned .work-video {
     max-height: calc(100svh - var(--pin-top) - 150px);
     object-fit: cover;
     object-position: top;

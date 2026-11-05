@@ -285,7 +285,12 @@ function initWorks() {
         });
 
         const active = Math.round(progress);
-        works.forEach((work, i) => work.classList.toggle('is-active', i === active));
+        works.forEach((work, i) => {
+            work.classList.toggle('is-active', i === active);
+            const video = work.querySelector('.work-video');
+            if (video && i === active) video.play().catch(() => {});
+            else if (video) video.pause();
+        });
         setCurrent(ticks, active);
         current.textContent = String(active + 1).padStart(2, '0');
     };
@@ -320,6 +325,23 @@ function initWorks() {
     works.forEach((work) => {
         if (hasObserver) onceVisible(work, 0.15, () => work.classList.add('is-seen'));
         else work.classList.add('is-seen');
+    });
+}
+
+// Sin sección fija, los vídeos solo se reproducen en pantalla; sin movimiento se dejan con sus controles
+function initWorkVideos() {
+    const videos = document.querySelectorAll('.work-video');
+
+    videos.forEach((video) => {
+        if (reduceMotion || !hasObserver) {
+            video.controls = true;
+            return;
+        }
+        new IntersectionObserver(([entry]) => {
+            if (video.closest('.is-pinned')) return;
+            if (entry.isIntersecting) video.play().catch(() => {});
+            else video.pause();
+        }, { threshold: 0.25 }).observe(video);
     });
 }
 
@@ -491,6 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initRotator(initStage());
     initNeeds();
     initWorks();
+    initWorkVideos();
     initTimeBar();
     initWorries();
     initLetter();
